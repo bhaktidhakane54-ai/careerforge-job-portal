@@ -1,0 +1,323 @@
+[
+  {
+    "id": "job-1",
+    "title": "Software Development Engineer - I (SDE-1)",
+    "company": "Amazon",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/4/4a/Amazon_icon.svg",
+    "location": "Bengaluru / Hyderabad (Hybrid)",
+    "type": "Full-time",
+    "experience": "0-2 Years",
+    "salary": "₹18,00,000 - ₹24,00,000 PA",
+    "category": "Product",
+    "domain": "Backend / Systems",
+    "posted": "2 days ago",
+    "deadline": "2026-12-15",
+    "openings": 15,
+    "description": "Amazon is seeking dynamic Software Development Engineers (SDE-1) to build scalable, high-throughput backend microservices powering AWS and Amazon Retail. You will work on distributed systems handling millions of transactions per second.",
+    "responsibilities": [
+      "Design, build and maintain performant services using Java/Python and AWS stack.",
+      "Collaborate with Senior Engineers to write clean, unit-tested, scalable code.",
+      "Participate in design reviews, operational excellence, and CI/CD automation.",
+      "Troubleshoot complex production issues and improve system reliability."
+    ],
+    "requirements": [
+      "B.Tech / B.E / M.Tech in Computer Science, IT or related fields (2024-2026 Batch).",
+      "Strong proficiency in Core Java, C++, or Python with deep understanding of OOP.",
+      "Solid foundation in Data Structures, Algorithms (Arrays, Graphs, DP), and Time Complexity.",
+      "Familiarity with DBMS, SQL, REST APIs, and Operating Systems concepts."
+    ],
+    "skills": ["Java", "Data Structures", "Algorithms", "AWS", "SQL", "OOP", "System Design Basics"],
+    "prepTags": ["DSA", "Operating Systems", "DBMS", "System Design"],
+    "companyId": "amazon"
+  },
+  {
+    "id": "job-2",
+    "title": "Associate Software Engineer",
+    "company": "Google",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg",
+    "location": "Bengaluru / Hyderabad",
+    "type": "Full-time",
+    "experience": "0-1 Years",
+    "salary": "₹22,00,000 - ₹32,00,000 PA",
+    "category": "Product",
+    "domain": "Full Stack / Infrastructure",
+    "posted": "1 day ago",
+    "deadline": "2026-12-20",
+    "openings": 8,
+    "description": "Join Google's engineering team to tackle planetary-scale challenges. You'll contribute to software components used across Search, YouTube, Android, and Google Cloud, focusing on algorithms, concurrency, and elegant engineering.",
+    "responsibilities": [
+      "Write robust code in C++, Java, Go, or Python adhering to Google code standards.",
+      "Develop scalable software systems handling billions of queries.",
+      "Analyze latency bottlenecks and optimize algorithm execution."
+    ],
+    "requirements": [
+      "Bachelor's or Master's degree in CS or equivalent field with min. 7.5 CGPA.",
+      "Excellence in competitive programming or advanced Data Structures & Algorithms.",
+      "Strong grasp of Computer Networks, Concurrency, and Memory Management."
+    ],
+    "skills": ["C++", "Python", "Algorithms", "Distributed Systems", "Linux", "Data Structures"],
+    "prepTags": ["DSA", "Computer Networks", "OS"],
+    "companyId": "google"
+  },
+  {
+    "id": "job-3",
+    "title": "Software Engineer - Front End",
+    "company": "Microsoft",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg",
+    "location": "Noida / Hyderabad",
+    "type": "Full-time",
+    "experience": "Fresher / 0-2 Years",
+    "salary": "₹16,00,000 - ₹22,00,000 PA",
+    "category": "Product",
+    "domain": "Frontend",
+    "posted": "3 days ago",
+    "deadline": "2026-12-10",
+    "openings": 10,
+    "description": "Microsoft 365 team is looking for a passionate Frontend Engineer. You will craft responsive, high-performance web experiences serving hundreds of millions of daily active users worldwide.",
+    "responsibilities": [
+      "Build modular UI components using React, TypeScript, and modern CSS architectures.",
+      "Optimize web application performance, accessibility (a11y), and cross-browser compatibility.",
+      "Work closely with UX designers, product managers, and backend engineers."
+    ],
+    "requirements": [
+      "Strong fundamentals in JavaScript (ES6+), TypeScript, React, HTML5, and CSS3.",
+      "Understanding of web performance, browser rendering pipeline, and REST/GraphQL APIs.",
+      "Solid grasp of fundamental Data Structures (Trees, Strings, Graphs)."
+    ],
+    "skills": ["React", "TypeScript", "JavaScript", "HTML/CSS", "DSA", "Web Performance"],
+    "prepTags": ["Web Tech", "DSA", "Technical"],
+    "companyId": "microsoft"
+  },
+  {
+    "id": "job-4",
+    "title": "System Engineer (TCS Digital / Prime)",
+    "company": "Tata Consultancy Services (TCS)",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/b/b1/Tata_Consultancy_Services_Logo.svg",
+    "location": "Pan India (Multiple Locations)",
+    "type": "Full-time",
+    "experience": "Fresher (2025/2026)",
+    "salary": "₹7,00,000 - ₹9,50,000 PA",
+    "category": "Service",
+    "domain": "Full Stack / Cloud / AI",
+    "posted": "Just now",
+    "deadline": "2026-12-30",
+    "openings": 250,
+    "description": "TCS is hiring through the National Qualifier Test (NQT) for high-caliber engineers in the Digital & Prime cadres. Selected engineers work on cutting-edge Cloud, AI, and enterprise digital transformation projects.",
+    "responsibilities": [
+      "Participate in full life cycle software development for Fortune 500 global clients.",
+      "Work on Cloud migration, Python/Java microservices, and AI-driven automation.",
+      "Deploy solutions on Azure/AWS and participate in Agile sprints."
+    ],
+    "requirements": [
+      "B.Tech / B.E / MCA / M.Sc graduates with minimum 60% or 6.0 CGPA throughout academics.",
+      "No active backlogs at the time of joining.",
+      "Clear understanding of Aptitude, Verbal, Logical, and Coding (Data Structures)."
+    ],
+    "skills": ["Java / Python", "SQL", "Aptitude", "Problem Solving", "Web Development"],
+    "prepTags": ["Aptitude", "Logical Reasoning", "DSA", "HR"],
+    "companyId": "tcs"
+  },
+  {
+    "id": "job-5",
+    "title": "Specialist Programmer (Power Programmer)",
+    "company": "Infosys",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/9/95/Infosys_logo.svg",
+    "location": "Bengaluru / Pune / Mysuru",
+    "type": "Full-time",
+    "experience": "Fresher",
+    "salary": "₹9,50,000 - ₹11,00,000 PA",
+    "category": "Service",
+    "domain": "Full Stack / Deep Tech",
+    "posted": "4 days ago",
+    "deadline": "2026-12-25",
+    "openings": 75,
+    "description": "Specialist Programmer (SP) is an elite coding role at Infosys requiring mastery in problem-solving and algorithmic thinking. SPs work on core product engineering and high-complexity client architectures.",
+    "responsibilities": [
+      "Write high-performance algorithmic code for enterprise-grade applications.",
+      "Design microservices, API integrations, and event-driven architectures.",
+      "Mentor junior team members and implement engineering best practices."
+    ],
+    "requirements": [
+      "Exceptional algorithmic problem-solving ability tested via HackWithInfy / InfyTQ.",
+      "Proficiency in Java, Python, C++, or modern web frameworks.",
+      "Thorough understanding of Dynamic Programming, Graph Theory, and DBMS."
+    ],
+    "skills": ["Algorithms", "Dynamic Programming", "Graph Theory", "Java", "Python", "SQL"],
+    "prepTags": ["DSA", "Aptitude", "Technical"],
+    "companyId": "infosys"
+  },
+  {
+    "id": "job-6",
+    "title": "Associate Software Engineer (ASE)",
+    "company": "Accenture",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/c/cd/Accenture.svg",
+    "location": "Bengaluru / Gurgaon / Hyderabad / Chennai",
+    "type": "Full-time",
+    "experience": "Fresher",
+    "salary": "₹4,50,000 - ₹6,50,000 PA",
+    "category": "Service",
+    "domain": "Software Engineering",
+    "posted": "5 days ago",
+    "deadline": "2026-12-31",
+    "openings": 400,
+    "description": "Accenture is hiring Associate Software Engineers. The role offers intensive training in digital technologies, cloud services, and full stack development followed by deployment to global enterprise projects.",
+    "responsibilities": [
+      "Develop, test, and deploy software applications based on client specifications.",
+      "Collaborate in cross-functional squads using Agile methodology.",
+      "Maintain code repositories, documentation, and automated test suites."
+    ],
+    "requirements": [
+      "B.E / B.Tech all streams with 65% or 6.5 CGPA and no current backlogs.",
+      "Aptitude, Critical Thinking, Pseudo Code, and Hands-on Coding proficiency.",
+      "Strong verbal and written communication skills."
+    ],
+    "skills": ["Pseudo Code", "Aptitude", "C / C++ / Java / Python", "Networking Basics", "Cloud Basics"],
+    "prepTags": ["Aptitude", "Pseudo Code", "Technical", "HR"],
+    "companyId": "accenture"
+  },
+  {
+    "id": "job-7",
+    "title": "Software Development Engineer - Backend",
+    "company": "Swiggy",
+    "logo": "https://upload.wikimedia.org/wikipedia/en/1/12/Swiggy_logo.svg",
+    "location": "Bengaluru (Remote-First)",
+    "type": "Full-time",
+    "experience": "1-3 Years",
+    "salary": "₹19,00,000 - ₹26,00,000 PA",
+    "category": "Product",
+    "domain": "Backend / Microservices",
+    "posted": "3 days ago",
+    "deadline": "2026-12-18",
+    "openings": 6,
+    "description": "Swiggy is seeking backend engineers to supercharge hyperlocal logistics, rapid delivery, and order allocation engines handling millions of live transactions daily.",
+    "responsibilities": [
+      "Build low-latency microservices with Go, Java, or Node.js.",
+      "Work with Kafka, Redis, and MySQL to manage high throughput event streams.",
+      "Participate in architecture design for hyper-growth scaling."
+    ],
+    "requirements": [
+      "1+ years of backend development experience or strong personal projects/internships.",
+      "Strong knowledge of Data Structures, Concurrency, and System Design.",
+      "Experience with relational databases and in-memory caches."
+    ],
+    "skills": ["Go", "Java", "Kafka", "Redis", "MySQL", "Distributed Systems", "DSA"],
+    "prepTags": ["DSA", "DBMS", "System Design"],
+    "companyId": "swiggy"
+  },
+  {
+    "id": "job-8",
+    "title": "Software Development Intern (6 Months)",
+    "company": "Adobe",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/5/51/Adobe_Corporate_Logo.svg",
+    "location": "Noida / Bengaluru",
+    "type": "Internship",
+    "experience": "Students / Fresher (2026 Batch)",
+    "salary": "₹1,00,000 / month Stipend (PPO Available)",
+    "category": "Product",
+    "domain": "Algorithms / Creative Cloud",
+    "posted": "6 days ago",
+    "deadline": "2026-12-22",
+    "openings": 12,
+    "description": "Adobe's Product Engineering internship offers hands-on experience building components for Adobe Creative Cloud, Document Cloud, and Experience Platform.",
+    "responsibilities": [
+      "Collaborate with senior researchers and engineers on innovative image and document processing algorithms.",
+      "Implement performant code in C++ or WebAssembly.",
+      "Present project findings to senior leadership at the conclusion of the internship."
+    ],
+    "requirements": [
+      "Currently pursuing B.Tech/M.Tech in CS or related field graduating in 2026.",
+      "Strong proficiency in C++ and Object-Oriented Design.",
+      "Excellent Data Structures, Algorithm design, and problem solving skills."
+    ],
+    "skills": ["C++", "Data Structures", "Algorithms", "OOP", "Computer Graphics Basics"],
+    "prepTags": ["DSA", "OOP", "Technical"],
+    "companyId": "adobe"
+  },
+  {
+    "id": "job-9",
+    "title": "Backend Engineer - Payments",
+    "company": "Razorpay",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/8/89/Razorpay_logo.svg",
+    "location": "Bengaluru (Hybrid)",
+    "type": "Full-time",
+    "experience": "1-3 Years",
+    "salary": "₹17,00,000 - ₹25,00,000 PA",
+    "category": "Fintech",
+    "domain": "Fintech / Backend",
+    "posted": "2 days ago",
+    "deadline": "2026-12-28",
+    "openings": 5,
+    "description": "Razorpay powers payments for millions of businesses across India. We're hiring engineers to maintain 99.999% uptime on our core payment gateway and settlement pipelines.",
+    "responsibilities": [
+      "Architect idempotent, fault-tolerant payment APIs in Go or PHP.",
+      "Design transactional database schemas ensuring strict ACID guarantees.",
+      "Ensure adherence to banking compliance and highest financial security standards."
+    ],
+    "requirements": [
+      "Sound understanding of transactional databases (PostgreSQL/MySQL) and locking.",
+      "Solid knowledge of Computer Networks, Security (TLS/HTTPS), and DSA.",
+      "Strong coding abilities with focus on clean code and test coverage."
+    ],
+    "skills": ["Go", "PHP", "MySQL", "Redis", "Distributed Systems", "Computer Networks"],
+    "prepTags": ["DBMS", "Computer Networks", "DSA"],
+    "companyId": "razorpay"
+  },
+  {
+    "id": "job-10",
+    "title": "Graduate Trainee Engineer",
+    "company": "Cognizant",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/3/30/Cognizant_logo_2022.svg",
+    "location": "Chennai / Kolkata / Pune",
+    "type": "Full-time",
+    "experience": "Fresher (2025/2026)",
+    "salary": "₹4,25,000 - ₹6,75,000 PA",
+    "category": "Service",
+    "domain": "Software Development / Testing",
+    "posted": "1 week ago",
+    "deadline": "2027-01-05",
+    "openings": 200,
+    "description": "Cognizant GenC / GenC Next hiring drive invites engineering graduates to begin their IT career with comprehensive technical coaching in modern cloud and web technologies.",
+    "responsibilities": [
+      "Build and test software modules under lead guidance.",
+      "Learn and apply continuous integration and automated test frameworks.",
+      "Participate in client meetings and agile sprint reviews."
+    ],
+    "requirements": [
+      "B.Tech / B.E all branches with minimum 60% aggregate.",
+      "Good communication skills and logical reasoning aptitude.",
+      "Knowledge of at least one programming language (Java, C, Python)."
+    ],
+    "skills": ["Java", "Python", "SQL", "Aptitude", "Logical Reasoning"],
+    "prepTags": ["Aptitude", "Logical Reasoning", "HR", "Technical"],
+    "companyId": "cognizant"
+  },
+  {
+    "id": "job-11",
+    "title": "Project Engineer - Turbo Cadre",
+    "company": "Wipro",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/a/a0/Wipro_Primary_Logo_Color_RGB.svg",
+    "location": "Bengaluru / Pune / Hyderabad",
+    "type": "Full-time",
+    "experience": "Fresher (2025/2026 Batch)",
+    "salary": "₹6,50,000 PA",
+    "category": "Service",
+    "domain": "Full Stack / Cloud Services",
+    "posted": "Just now",
+    "deadline": "2026-12-30",
+    "openings": 120,
+    "description": "Wipro is hiring Project Engineers in the Turbo cadre through the Elite National Talent Hunt. Selected engineers work on advanced client projects in Cloud, AI automation, and Full Stack development.",
+    "responsibilities": [
+      "Develop enterprise application modules using Java, Python, or .NET.",
+      "Participate in Agile sprints, automated unit testing, and continuous deployment pipelines.",
+      "Collaborate with client architects to deliver secure, scalable digital transformation products."
+    ],
+    "requirements": [
+      "B.E / B.Tech / M.Tech in all engineering streams with min 60% or 6.0 CGPA.",
+      "Max 1 active backlog at assessment time; 0 backlogs at joining.",
+      "Strong proficiency in basic algorithms, OOPs, SQL, and Verbal & Logical reasoning."
+    ],
+    "skills": ["Java", "Python", "SQL", "Data Structures", "Cloud Basics", "OOPs"],
+    "prepTags": ["Aptitude", "Logical Reasoning", "DSA", "Technical", "HR"],
+    "companyId": "wipro"
+  }
+]

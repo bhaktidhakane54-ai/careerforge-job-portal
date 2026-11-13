@@ -1,0 +1,680 @@
+{
+  "aptitude": {
+    "title": "Quantitative Aptitude",
+    "description": "Essential mathematical concepts, formulas, shortcuts, and problem-solving techniques for campus placement and competitive exams.",
+    "notes": [
+      {
+        "subtopic": "Time and Work",
+        "summary": "If A can complete a work in 'n' days, then A's 1 day work = 1/n. If A is 'k' times as efficient as B, then ratio of work done = k:1 and ratio of time taken = 1:k.",
+        "formula": "Total Work = Efficiency \u00d7 Time. If A and B work together, Time = (A \u00d7 B) / (A + B).",
+        "keyTip": "Always assume total work as the LCM of individual times to avoid fractional calculations."
+      },
+      {
+        "subtopic": "Speed, Distance and Time",
+        "summary": "Speed = Distance / Time. To convert km/h to m/s, multiply by 5/18. To convert m/s to km/h, multiply by 18/5.",
+        "formula": "Relative speed: Same direction = (u - v), Opposite direction = (u + v). Average Speed for equal distances = (2 \u00d7 u \u00d7 v) / (u + v).",
+        "keyTip": "When a train crosses a platform or bridge of length L, total distance covered = Length of Train + L."
+      },
+      {
+        "subtopic": "Percentages, Profit and Loss",
+        "summary": "Profit % = (Profit / Cost Price) \u00d7 100. Loss % = (Loss / Cost Price) \u00d7 100. Selling Price = CP \u00d7 (100 + P%) / 100.",
+        "formula": "Marked Price & Discount: Selling Price = MP \u00d7 (100 - Discount%) / 100. Successive discounts d1 and d2 = (d1 + d2 - (d1 \u00d7 d2)/100)%.",
+        "keyTip": "Profit and Loss are always calculated on Cost Price (CP) unless specifically specified otherwise."
+      },
+      {
+        "subtopic": "Permutations, Combinations & Probability",
+        "summary": "Permutation: nPr = n! / (n - r)! (Arrangements where order matters). Combination: nCr = n! / (r! \u00d7 (n - r)!) (Selection where order does not matter).",
+        "formula": "Probability P(E) = Favorable Outcomes / Total Sample Space. P(A \u222a B) = P(A) + P(B) - P(A \u2229 B).",
+        "keyTip": "Keywords: 'At least one' = 1 - P(none)."
+      },
+      {
+        "subtopic": "Ratio, Proportion & Mixtures",
+        "summary": "Duplicate ratio of a:b is a^2:b^2. Mean proportional between a and b is sqrt(a*b). In mixtures, Rule of Alligation: (Cheaper quantity / Dearer quantity) = (Mean Price - Cheaper Price) / (Dearer Price - Mean Price).",
+        "formula": "Alligation Rule: (Q1 / Q2) = (C2 - M) / (M - C1)",
+        "keyTip": "When replacing quantity y from total x repeatedly n times: Remaining Liquid = x * (1 - y/x)^n."
+      },
+      {
+        "subtopic": "Simple & Compound Interest",
+        "summary": "SI = (P * R * T) / 100. CI = P * (1 + R/100)^T - P. Difference between CI and SI for 2 years = P * (R/100)^2.",
+        "formula": "CI - SI (2 Years) = P * (R/100)^2; CI - SI (3 Years) = P * (R/100)^2 * (3 + R/100)",
+        "keyTip": "If a sum doubles in T years in CI, it becomes 2^n times in n*T years."
+      }
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "topic": "Time and Work",
+        "question": "A can finish a work in 12 days and B can finish it in 18 days. They worked together for 4 days, then A left. In how many more days will B finish the remaining work?",
+        "options": [
+          "6 days",
+          "8 days",
+          "10 days",
+          "12 days"
+        ],
+        "correct": 1,
+        "explanation": "Assume Total Work = LCM(12, 18) = 36 units. Efficiency of A = 36/12 = 3 units/day. Efficiency of B = 36/18 = 2 units/day. In 4 days, work done together = 4 \u00d7 (3 + 2) = 20 units. Remaining work = 36 - 20 = 16 units. Days taken by B alone = 16 / 2 = 8 days."
+      },
+      {
+        "id": "q2",
+        "topic": "Speed, Distance and Time",
+        "question": "A train 180 meters long is traveling at a speed of 72 km/h. How much time will it take to pass a telegraph post?",
+        "options": [
+          "7 seconds",
+          "9 seconds",
+          "10 seconds",
+          "12 seconds"
+        ],
+        "correct": 1,
+        "explanation": "Convert speed: 72 \u00d7 (5/18) = 20 m/s. Distance to cross a post is the length of the train = 180 m. Time = Distance / Speed = 180 / 20 = 9 seconds."
+      },
+      {
+        "id": "q3",
+        "topic": "Percentages, Profit and Loss",
+        "question": "A shopkeeper marks an article at \u20b9800 and offers two successive discounts of 10% and 5%. What is the final selling price?",
+        "options": [
+          "\u20b9684",
+          "\u20b9700",
+          "\u20b9720",
+          "\u20b9650"
+        ],
+        "correct": 0,
+        "explanation": "Price after 1st discount of 10% = 800 - 80 = \u20b9720. Price after 2nd discount of 5% = 720 - (5% of 720) = 720 - 36 = \u20b9684."
+      },
+      {
+        "id": "q4",
+        "topic": "Probability",
+        "question": "Two dice are thrown simultaneously. What is the probability of getting a sum of 8?",
+        "options": [
+          "5/36",
+          "7/36",
+          "1/6",
+          "1/9"
+        ],
+        "correct": 0,
+        "explanation": "Total sample space = 6 \u00d7 6 = 36. Pairs giving sum = 8 are: (2,6), (3,5), (4,4), (5,3), (6,2) = 5 pairs. Probability = 5/36."
+      },
+      {
+        "id": "q5",
+        "topic": "Ratio and Proportion",
+        "question": "The ratio of boys and girls in a college is 7 : 5. If 20 more girls join, the ratio becomes 7 : 6. Find the number of boys in the college.",
+        "options": [
+          "140",
+          "120",
+          "100",
+          "160"
+        ],
+        "correct": 0,
+        "explanation": "Let boys = 7x and girls = 5x. According to question: 7x / (5x + 20) = 7/6 => 6x = 5x + 20 => x = 20. Total boys = 7 * 20 = 140."
+      },
+      {
+        "id": "q6",
+        "topic": "Compound Interest",
+        "question": "The difference between simple and compound interest on a sum of money for 2 years at 10% per annum is \u20b965. What is the sum?",
+        "options": [
+          "\u20b96,500",
+          "\u20b97,000",
+          "\u20b95,500",
+          "\u20b96,000"
+        ],
+        "correct": 0,
+        "explanation": "Difference = P * (R/100)^2 => 65 = P * (10/100)^2 = P * (1/100) => P = 65 * 100 = \u20b96,500."
+      }
+    ]
+  },
+  "logical": {
+    "title": "Logical Reasoning",
+    "description": "Critical thinking, deductive logic, abstract patterns, seating arrangements, and analytical problem-solving.",
+    "notes": [
+      {
+        "subtopic": "Syllogisms",
+        "summary": "Deductions based on universal statements (All, No) and particular statements (Some, Some not). Check truth under ALL possible Venn diagram representations.",
+        "formula": "Rules: Negative premises give negative conclusions. Two particular premises give no valid universal conclusion.",
+        "keyTip": "If a conclusion holds true in the basic Venn diagram but fails in an alternative valid Venn diagram, it is NOT definitely true."
+      },
+      {
+        "subtopic": "Blood Relations",
+        "summary": "Tree representation: Use + for male, - for female, = for spouses, and vertical lines for parent-child relationships.",
+        "formula": "Generations: Grandparents (+2), Parents (+1), Siblings/Self (0), Children (-1).",
+        "keyTip": "Never assume the gender of a person by name alone unless specified in the statement."
+      },
+      {
+        "subtopic": "Coding & Decoding",
+        "summary": "Letters are mapped using alphabetical positions (A=1, Z=26) or reverse positions (A=26, Z=1). Use the EJOTY rule (5, 10, 15, 20, 25).",
+        "formula": "Opposite letter pairs sum up to 27: A+Z = 1+26 = 27, B+Y = 2+25 = 27.",
+        "keyTip": "Check difference in letter indices: +1, -1, +2, -2, alternating shifts, or reverse order."
+      },
+      {
+        "subtopic": "Seating Arrangements (Linear & Circular)",
+        "summary": "In circular arrangements facing inward, right is anti-clockwise and left is clockwise. If facing outward, right is clockwise and left is anti-clockwise.",
+        "formula": "Linear: Person's rank from right = (Total persons - Rank from left) + 1.",
+        "keyTip": "Always lock definite conditions first (e.g. 'A sits third to the left of B') before placing conditional statements."
+      },
+      {
+        "subtopic": "Direction Sense Test",
+        "summary": "Main cardinal directions (North, South, East, West) and intermediate directions (NE, NW, SE, SW). Sun rises in East and sets in West.",
+        "formula": "Pythagoras theorem: Shortest Distance = sqrt(Base^2 + Perpendicular^2).",
+        "keyTip": "At sunrise, a person's shadow falls towards the West; at sunset, shadows fall towards the East."
+      }
+    ],
+    "questions": [
+      {
+        "id": "l1",
+        "topic": "Syllogisms",
+        "question": "Statements: All cars are bikes. All bikes are trucks. Conclusions: I. All cars are trucks. II. Some trucks are cars.",
+        "options": [
+          "Only conclusion I follows",
+          "Only conclusion II follows",
+          "Both conclusions I and II follow",
+          "Neither follows"
+        ],
+        "correct": 2,
+        "explanation": "Since Cars \u2286 Bikes and Bikes \u2286 Trucks, Cars \u2286 Trucks (Conclusion I holds). Since Cars are a non-empty subset of Trucks, Some trucks are cars (Conclusion II also holds). Both follow."
+      },
+      {
+        "id": "l2",
+        "topic": "Blood Relations",
+        "question": "Pointing to a man, Rahul said, 'His only brother is the father of my daughter's father.' How is the man related to Rahul?",
+        "options": [
+          "Father",
+          "Uncle",
+          "Grandfather",
+          "Brother"
+        ],
+        "correct": 1,
+        "explanation": "'My daughter's father' is Rahul himself. 'The father of Rahul' is Rahul's father. 'His only brother is Rahul's father', so the man is the brother of Rahul's father, which means he is Rahul's Uncle."
+      },
+      {
+        "id": "l3",
+        "topic": "Coding Decoding",
+        "question": "In a certain code language, 'ROSE' is written as 'TQUG'. How will 'BLUE' be written in that code?",
+        "options": [
+          "DNWG",
+          "DNXG",
+          "COVF",
+          "DNVG"
+        ],
+        "correct": 0,
+        "explanation": "Pattern: Each letter is shifted by +2 positions. B(+2) = D, L(+2) = N, U(+2) = W, E(+2) = G. Therefore, 'BLUE' becomes 'DNWG'."
+      },
+      {
+        "id": "l4",
+        "topic": "Direction Sense",
+        "question": "A man walks 6 km South, turns left and walks 4 km, then turns left and walks 3 km. How far is he from his initial starting point?",
+        "options": [
+          "5 km",
+          "7 km",
+          "6 km",
+          "4 km"
+        ],
+        "correct": 0,
+        "explanation": "Net South distance = 6 - 3 = 3 km. Net East distance = 4 km. Shortest distance = sqrt(3^2 + 4^2) = sqrt(9 + 16) = sqrt(25) = 5 km."
+      },
+      {
+        "id": "l5",
+        "topic": "Seating Arrangement",
+        "question": "Five friends P, Q, R, S, T are sitting in a row facing North. S is between T and Q. Q is to the immediate left of R. P is to the immediate left of T. Who is in the middle?",
+        "options": [
+          "S",
+          "T",
+          "Q",
+          "P"
+        ],
+        "correct": 1,
+        "explanation": "From conditions: P is left of T (P, T). S is between T and Q (T, S, Q). Q is left of R (Q, R). Order: P, T, S, Q, R. Middle person is S. Wait: S is between T and Q, so T, S, Q. The order from left to right is P - T - S - Q - R. The middle person (3rd of 5) is S."
+      }
+    ]
+  },
+  "verbal": {
+    "title": "Verbal Ability & English Comprehension",
+    "description": "Vocabulary, English grammar rules, reading comprehension, error spotting, and verbal fluency for assessments.",
+    "notes": [
+      {
+        "subtopic": "Subject-Verb Agreement",
+        "summary": "Singular subjects require singular verbs; plural subjects require plural verbs. Phrases between subject and verb (e.g. 'along with', 'as well as', 'together with') do not affect verb number.",
+        "formula": "'Neither...nor' / 'Either...or': Verb agrees with the subject closest to it.",
+        "keyTip": "'Each', 'everyone', 'everybody', 'anyone', 'somebody' take singular verbs."
+      },
+      {
+        "subtopic": "Sentence Correction & Modifiers",
+        "summary": "Dangling modifier error: A descriptive modifier phrase at the beginning of a sentence must logically describe the noun immediately following it.",
+        "formula": "Parallelism: Items in a series or comparison must share identical grammatical form (gerunds with gerunds, infinitives with infinitives).",
+        "keyTip": "Check for redundancy: 'return back' (incorrect) -> 'return' (correct)."
+      },
+      {
+        "subtopic": "Tenses & Conditionals",
+        "summary": "Conditional Sentences: 1) Real condition: If + Present Simple, will + base verb. 2) Unreal present: If + Past Simple, would + base verb. 3) Unreal past: If + Past Perfect (had + V3), would have + V3.",
+        "formula": "Zero: If + Present, Present. Type 1: If + Present, Will. Type 2: If + Past, Would. Type 3: If + Had V3, Would have V3.",
+        "keyTip": "Never use 'would have' in the 'if' clause of conditional sentences."
+      },
+      {
+        "subtopic": "Para Jumbles & Coherence",
+        "summary": "Look for the mandatory introductory sentence (defines the noun/subject, no pronouns like 'He', 'They', 'This'). Match pronoun-noun pairs and transition words (However, Therefore, Furthermore, In contrast).",
+        "formula": "Framework: Noun introduction -> Explanatory sentence -> Supporting examples -> Concluding summary.",
+        "keyTip": "Acronyms are introduced after full forms: 'Indian Space Research Organisation (ISRO)' precedes 'ISRO'."
+      }
+    ],
+    "questions": [
+      {
+        "id": "v1",
+        "topic": "Subject-Verb Agreement",
+        "question": "Neither the manager nor the employees _____ present at the annual general meeting.",
+        "options": [
+          "was",
+          "were",
+          "is",
+          "has been"
+        ],
+        "correct": 1,
+        "explanation": "With 'Neither...nor', the verb agrees with the subject closest to it. 'The employees' is plural, so the plural verb 'were' is required."
+      },
+      {
+        "id": "v2",
+        "topic": "Vocabulary / Idioms",
+        "question": "What is the meaning of the idiom 'To bite the bullet'?",
+        "options": [
+          "To commit an act of aggression",
+          "To face an inevitable grim situation with courage",
+          "To speak without thinking",
+          "To be in severe pain"
+        ],
+        "correct": 1,
+        "explanation": "'To bite the bullet' means to bravely endure a painful, grim, or difficult situation that is unavoidable."
+      },
+      {
+        "id": "v3",
+        "topic": "Conditionals",
+        "question": "If he _____ harder, he would have passed the examination.",
+        "options": [
+          "had studied",
+          "studied",
+          "would study",
+          "has studied"
+        ],
+        "correct": 0,
+        "explanation": "In Type 3 conditionals (unreal past with 'would have passed' in the main clause), the 'if' clause requires the Past Perfect tense ('had studied')."
+      },
+      {
+        "id": "v4",
+        "topic": "Error Spotting",
+        "question": "Identify the incorrect part: 'Each of the students (A) / are required to submit (B) / their assignments on time (C) / No error (D)'",
+        "options": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "correct": 1,
+        "explanation": "Part (B) is incorrect. 'Each' is singular and takes a singular verb: 'is required to submit' instead of 'are required'."
+      }
+    ]
+  },
+  "dsa": {
+    "title": "DSA Core Concepts & Algorithmic Patterns",
+    "description": "Essential mental models, algorithmic patterns, asymptotic complexity cheat-sheets, and interview frameworks.",
+    "notes": [
+      {
+        "heading": "Time & Space Complexity (Big-O)",
+        "content": "O(1) Constant (Hash Map lookup, array indexing) < O(log N) Logarithmic (Binary Search, balanced BST) < O(N) Linear (Single traversal, Two Pointers) < O(N log N) Linearithmic (Merge Sort, Heap Sort) < O(N^2) Quadratic (Nested loops, Bubble Sort) < O(2^N) Exponential (Subsets, naive recursion) < O(N!) Factorial (Permutations, Traveling Salesperson). Always account for recursion stack space in DFS."
+      },
+      {
+        "heading": "Two Pointers & Sliding Window",
+        "content": "Two Pointers: Use for sorted arrays or bidirectional checks (e.g. Valid Palindrome, Two Sum II, 3Sum, Container With Most Water). Sliding Window: Maintain a contiguous subarray window [L, R]. Expand R to satisfy conditions, contract L to restore constraints (e.g. Longest Substring Without Repeating Characters, Minimum Window Substring)."
+      },
+      {
+        "heading": "Monotonic Stack Pattern",
+        "content": "A stack where elements are kept in strictly increasing or decreasing order. Essential for finding the 'Next Greater Element', 'Previous Smaller Element', 'Daily Temperatures', and 'Largest Rectangle in Histogram' in optimal O(N) time instead of O(N^2)."
+      },
+      {
+        "heading": "Tree & Graph Traversals",
+        "content": "Trees: Pre-order (Root-L-R), In-order (L-Root-R: yields sorted order for BST), Post-order (L-R-Root: optimal for bottom-up calculations like LCA and Tree Height), Level-order (BFS with queue). Graphs: BFS for shortest path in unweighted graphs; DFS for connected components, cycle detection, and topological sorting (Kahn's Algorithm with in-degrees)."
+      },
+      {
+        "heading": "Dynamic Programming: Memoization vs Tabulation",
+        "content": "Use DP when a problem exhibits Overlapping Subproblems and Optimal Substructure. Top-Down (Memoization): Recursive + Hash Map/Array cache. Bottom-Up (Tabulation): Iterative table filling. Core archetypes: 1D DP (Climbing Stairs, Coin Change, House Robber), 2D Grid DP (Unique Paths, Minimum Path Sum), 0/1 Knapsack, Longest Common Subsequence (LCS)."
+      }
+    ],
+    "questions": [
+      {
+        "id": "dsa-th-1",
+        "question": "What is the worst-case time complexity of searching for an element in an unbalanced Binary Search Tree (BST)?",
+        "options": [
+          "O(log N)",
+          "O(N)",
+          "O(1)",
+          "O(N log N)"
+        ],
+        "correct": 1,
+        "explanation": "If a BST is degenerate (skewed like a linked list), searching takes O(N) time. Balanced BSTs (AVL, Red-Black) guarantee O(log N)."
+      },
+      {
+        "id": "dsa-th-2",
+        "question": "Which algorithmic pattern is best suited for finding the Next Greater Element in an array in O(N) time?",
+        "options": [
+          "Two Pointers",
+          "Monotonic Stack",
+          "Sliding Window",
+          "Binary Search"
+        ],
+        "correct": 1,
+        "explanation": "A Monotonic Decreasing Stack allows each element to be pushed and popped at most once, resolving next greater element lookups in linear O(N) time."
+      }
+    ]
+  },
+  "technical": {
+    "subjects": [
+      {
+        "id": "os",
+        "title": "Operating Systems (OS)",
+        "icon": "cpu",
+        "notes": [
+          {
+            "heading": "Process vs Thread",
+            "content": "A Process is an active execution program with its own dedicated virtual address space, memory (stack, heap, text, data), and OS descriptors. A Thread is a lightweight unit of execution within a process that shares the code, data, and heap with peer threads, but retains its own program counter, registers, and private stack. Context switching between threads is significantly faster because the page table and cache state don't need to be invalidated."
+          },
+          {
+            "heading": "Deadlock & Coffman Conditions",
+            "content": "A deadlock occurs when a set of processes are blocked because each process holds a resource and waits for another resource held by another process in the set. Four Coffman conditions must hold simultaneously: 1) Mutual Exclusion (resources non-shareable), 2) Hold and Wait (process holds resource while waiting for another), 3) No Preemption (resources cannot be forcibly reclaimed), 4) Circular Wait (closed loop of dependency). Deadlock can be prevented by breaking any one condition, or avoided using Banker's Algorithm."
+          },
+          {
+            "heading": "Memory Management & Virtual Memory",
+            "content": "Virtual Memory maps the contiguous address space seen by a process into physical RAM frames using Page Tables. A Page Fault occurs when a program attempts to access a page mapped to virtual space but not loaded into physical RAM. The OS fetches it from secondary storage (swap space). Common Page Replacement Algorithms: FIFO, Optimal (Belady's anomaly check), and LRU (Least Recently Used) implemented via Hash Map + Doubly Linked List."
+          }
+        ],
+        "questions": [
+          {
+            "id": "os-q1",
+            "question": "Which of the following conditions is NOT required for a deadlock to occur?",
+            "options": [
+              "Mutual Exclusion",
+              "Hold and Wait",
+              "Preemption of resources",
+              "Circular Wait"
+            ],
+            "correct": 2,
+            "explanation": "The four conditions are Mutual Exclusion, Hold & Wait, No Preemption, and Circular Wait. If preemption of resources is allowed, deadlock cannot occur."
+          },
+          {
+            "id": "os-q2",
+            "question": "What is Belady's Anomaly?",
+            "options": [
+              "Page faults decrease as page frame allocation increases",
+              "Page faults increase as page frame allocation increases in FIFO page replacement",
+              "Processes thrash when memory is 100% full",
+              "Deadlocks occur under high priority scheduling"
+            ],
+            "correct": 1,
+            "explanation": "Belady's Anomaly is a counter-intuitive phenomenon where increasing the number of page frames results in an increase in the number of page faults under the FIFO algorithm."
+          },
+          {
+            "id": "os-q3",
+            "question": "What is the primary difference between a mutex and a binary semaphore?",
+            "options": [
+              "A mutex has an ownership concept (only the locking thread can unlock it), whereas a semaphore does not",
+              "A semaphore can only be used between processes, not threads",
+              "A mutex allows multiple threads into the critical section",
+              "Binary semaphores are implemented in hardware only"
+            ],
+            "correct": 0,
+            "explanation": "A Mutex incorporates ownership: only the thread that acquired the mutex can release it. A Semaphore is a signaling mechanism where any thread/interrupt can signal (post) to release."
+          }
+        ]
+      },
+      {
+        "id": "dbms",
+        "title": "Database Management Systems (DBMS)",
+        "icon": "database",
+        "notes": [
+          {
+            "heading": "ACID Properties",
+            "content": "A: Atomicity - Transactions are all-or-nothing (rollback on failure). C: Consistency - The database transitions from one valid state to another satisfying all schema constraints. I: Isolation - Concurrent execution of transactions yields the same state as serial execution (Isolation levels: Read Uncommitted, Read Committed, Repeatable Read, Serializable). D: Durability - Once committed, changes survive system crashes (WAL - Write-Ahead Logging)."
+          },
+          {
+            "heading": "Database Normalization",
+            "content": "Normalization minimizes data redundancy and eliminates update/insertion/deletion anomalies. 1NF: Atomic values in columns, no repeating groups. 2NF: In 1NF and no partial dependencies (every non-prime attribute fully functionally dependent on whole candidate key). 3NF: In 2NF and no transitive dependencies. BCNF: In 3NF and for every functional dependency X -> Y, X must be a super key."
+          },
+          {
+            "heading": "Indexing & B+ Trees",
+            "content": "B+ Trees are the preferred indexing structure in relational databases because all data pointers reside in leaf nodes connected by a linked list, facilitating efficient range queries and sequential scans, while keeping the tree height small (O(log N)) to minimize disk I/O operations."
+          }
+        ],
+        "questions": [
+          {
+            "id": "db-q1",
+            "question": "Which normal form requires that every non-prime attribute be fully functionally dependent on the primary key, eliminating partial dependencies?",
+            "options": [
+              "First Normal Form (1NF)",
+              "Second Normal Form (2NF)",
+              "Third Normal Form (3NF)",
+              "Boyce-Codd Normal Form (BCNF)"
+            ],
+            "correct": 1,
+            "explanation": "2NF eliminates partial dependency, meaning every non-prime attribute must depend on the whole candidate key, not just a subset of a composite key."
+          },
+          {
+            "id": "db-q2",
+            "question": "Which SQL isolation level prevents Dirty Reads and Non-Repeatable Reads, but may still allow Phantom Reads?",
+            "options": [
+              "Read Uncommitted",
+              "Read Committed",
+              "Repeatable Read",
+              "Serializable"
+            ],
+            "correct": 2,
+            "explanation": "Repeatable Read guarantees that any data read cannot change throughout the transaction (preventing dirty and non-repeatable reads), but newly inserted rows matching a range query (phantom reads) may appear."
+          },
+          {
+            "id": "db-q3",
+            "question": "Why are B+ Trees favored over standard B Trees for database indexes?",
+            "options": [
+              "B+ trees require less memory for keys",
+              "Leaf nodes in B+ trees are linked in a Doubly Linked List, enabling fast range scans and higher branching factors in internal nodes",
+              "B+ trees guarantee O(1) searches",
+              "B trees cannot be stored on disk"
+            ],
+            "correct": 1,
+            "explanation": "In B+ trees, internal nodes only store routing keys, allowing a very high fan-out. All records reside in leaf nodes which are sequentially linked, making range queries (e.g. BETWEEN, >) extremely fast."
+          }
+        ]
+      },
+      {
+        "id": "cn",
+        "title": "Computer Networks (CN)",
+        "icon": "wifi",
+        "notes": [
+          {
+            "heading": "OSI vs TCP/IP Models",
+            "content": "OSI Model has 7 layers: Physical, Data Link, Network, Transport, Session, Presentation, Application (Please Do Not Throw Sausage Pizza Away). TCP/IP has 4/5 layers: Network Access, Internet (IP), Transport (TCP/UDP), Application (HTTP, DNS, SSH, FTP)."
+          },
+          {
+            "heading": "TCP vs UDP & 3-Way Handshake",
+            "content": "TCP is connection-oriented, reliable, orders packets, has flow control (Sliding Window) and congestion control. 3-Way Handshake: SYN -> SYN-ACK -> ACK. Termination: 4-way FIN-ACK handshake. UDP is connectionless, unreliable, has no packet ordering, but has near-zero overhead and minimal latency, ideal for video streaming, DNS, and multiplayer gaming."
+          },
+          {
+            "heading": "DNS, HTTP/HTTPS & SSL/TLS",
+            "content": "DNS resolves domain names to IP addresses (Recursive vs Iterative resolver). HTTP (port 80) is plaintext. HTTPS (port 443) encrypts communication using TLS. TLS Handshake: Client Hello -> Server Hello + Certificate -> Key Exchange (Asymmetric via RSA/Diffie-Hellman) -> Symmetric Session Key generation (AES) for high-speed data transmission."
+          }
+        ],
+        "questions": [
+          {
+            "id": "cn-q1",
+            "question": "In the TCP 3-way handshake, what sequence of packets is exchanged between client and server to establish a connection?",
+            "options": [
+              "SYN -> ACK -> SYN-ACK",
+              "SYN -> SYN-ACK -> ACK",
+              "ACK -> SYN -> ACK",
+              "FIN -> ACK -> FIN-ACK"
+            ],
+            "correct": 1,
+            "explanation": "The client sends a SYN packet, the server responds with a SYN-ACK packet, and the client replies with an ACK packet to establish the connection."
+          },
+          {
+            "id": "cn-q2",
+            "question": "Which protocol operates at the Transport layer and provides connectionless, unacknowledged datagram transmission?",
+            "options": [
+              "TCP",
+              "UDP",
+              "ICMP",
+              "ARP"
+            ],
+            "correct": 1,
+            "explanation": "UDP (User Datagram Protocol) is a connectionless Transport Layer protocol that sends datagrams without establishing a handshake or verifying receipt."
+          }
+        ]
+      },
+      {
+        "id": "oops",
+        "title": "Object-Oriented Programming (OOPs)",
+        "icon": "layers",
+        "notes": [
+          {
+            "heading": "The 4 Pillars of OOP",
+            "content": "1) Encapsulation: Bundling data and methods into a single unit and restricting direct access via access specifiers (private, protected, public). 2) Abstraction: Hiding internal implementation complexities and showing only essential interfaces (Abstract classes, Interfaces). 3) Inheritance: Mechanism where a child class acquires properties and behaviors of a parent class (Single, Multilevel, Multiple via interfaces). 4) Polymorphism: Ability to take multiple forms (Compile-time: Method Overloading; Runtime: Method Overriding using virtual functions)."
+          },
+          {
+            "heading": "SOLID Principles",
+            "content": "S: Single Responsibility Principle (A class should have only one reason to change). O: Open/Closed Principle (Open for extension, closed for modification). L: Liskov Substitution Principle (Derived classes must be substitutable for their base classes). I: Interface Segregation Principle (Clients should not be forced to depend on interfaces they do not use). D: Dependency Inversion Principle (High-level modules should depend on abstractions, not concretions)."
+          }
+        ],
+        "questions": [
+          {
+            "id": "oop-q1",
+            "question": "Which OOP concept is demonstrated when a subclass provides a specific implementation of a method that is already defined in its superclass?",
+            "options": [
+              "Method Overloading",
+              "Method Overriding",
+              "Encapsulation",
+              "Data Hiding"
+            ],
+            "correct": 1,
+            "explanation": "Method Overriding occurs when a child class redefines a method from its parent class with the same signature to provide specialized behavior at runtime."
+          },
+          {
+            "id": "oop-q2",
+            "question": "What is the 'L' in SOLID design principles?",
+            "options": [
+              "Law of Demeter",
+              "Liskov Substitution Principle",
+              "Linear Inheritance",
+              "Loose Coupling"
+            ],
+            "correct": 1,
+            "explanation": "L stands for Liskov Substitution Principle, which states that objects of a superclass should be replaceable with objects of a subclass without altering the correctness of the program."
+          }
+        ]
+      },
+      {
+        "id": "web_sys",
+        "title": "System Design & Web Tech Fundamentals",
+        "icon": "layers",
+        "notes": [
+          {
+            "heading": "Horizontal vs Vertical Scaling",
+            "content": "Vertical Scaling (Scaling Up): Adding more CPU, RAM, and SSDs to an existing server (simple, but hard hardware ceiling and single point of failure). Horizontal Scaling (Scaling Out): Adding more server instances behind a Load Balancer (elastic, high availability, fault-tolerant)."
+          },
+          {
+            "heading": "Caching & Redis Strategies",
+            "content": "Caches store frequently read data in RAM for sub-millisecond retrieval. Eviction policies: LRU (Least Recently Used), LFU (Least Frequently Used). Caching patterns: Cache-Aside (Lazy loading), Write-Through (write to cache and DB simultaneously), Write-Back (write to cache first, async write to DB)."
+          },
+          {
+            "heading": "REST APIs vs GraphQL vs WebSockets",
+            "content": "REST: Resource-based HTTP endpoints using standard verbs (GET, POST, PUT, DELETE) with stateless JSON responses. GraphQL: Single endpoint allowing client to query exact fields, preventing over-fetching. WebSockets: Persistent, bidirectional full-duplex TCP connection for real-time live apps (chat, stock feeds)."
+          }
+        ],
+        "questions": [
+          {
+            "id": "sys-q1",
+            "question": "Which HTTP status code signifies that a resource was successfully created on the server?",
+            "options": [
+              "200 OK",
+              "201 Created",
+              "204 No Content",
+              "301 Moved Permanently"
+            ],
+            "correct": 1,
+            "explanation": "HTTP 201 Created indicates that the request has succeeded and has led to the creation of a new resource."
+          }
+        ]
+      }
+    ]
+  },
+  "hr": {
+    "starMethod": {
+      "title": "The STAR Method for Behavioral Questions",
+      "steps": [
+        {
+          "letter": "S",
+          "name": "Situation",
+          "description": "Set the scene and provide necessary background context. Detail who, where, and when."
+        },
+        {
+          "letter": "T",
+          "name": "Task",
+          "description": "Describe your specific responsibility or the goal/obstacle you faced in that situation."
+        },
+        {
+          "letter": "A",
+          "name": "Action",
+          "description": "Explain the exact actions you took to address the problem. Focus on 'I' rather than 'We', highlighting your personal contribution and logic."
+        },
+        {
+          "letter": "R",
+          "name": "Result",
+          "description": "Share the measurable outcome of your actions. Include data points, lessons learned, and positive feedback."
+        }
+      ]
+    },
+    "questions": [
+      {
+        "id": "hr-1",
+        "question": "Tell me about yourself.",
+        "category": "Icebreaker & Elevator Pitch",
+        "framework": "Present -> Past -> Future formula (2 minutes maximum).",
+        "sampleAnswer": "I am a Final Year Computer Science student passionate about building performant backend web applications. Recently, I built an end-to-end full stack project utilizing Python and React that helped manage student recruitment drives, reducing manual coordination by 40%. Previously, I completed an internship where I optimized API queries and improved database indexing. Looking ahead, I am eager to apply my strong foundation in algorithms and software engineering to contribute to impactful enterprise projects at your company.",
+        "tips": "Do not simply recite your resume. Connect your academic background, best projects, and future career goals directly to this specific job description."
+      },
+      {
+        "id": "hr-2",
+        "question": "What are your greatest strengths and weaknesses?",
+        "category": "Self-Awareness",
+        "framework": "Strength with evidence + Real weakness with an active remediation plan.",
+        "sampleAnswer": "Strength: My greatest strength is rapid problem diagnosis and perseverance. When debugging a production issue during my project deployment, I systematically traced logs through each network layer until I isolated a concurrency race condition. Weakness: Early on, I found it difficult to say no and occasionally took on too many parallel responsibilities, which diluted my focus. To fix this, I adopted strict time-blocking and project management tools, which now allow me to communicate realistic commitments upfront.",
+        "tips": "Never give clich\u00e9s like 'I am a perfectionist' or 'I work too hard'. Pick a genuine weakness that isn't a core job dealbreaker, and prove how you are actively overcoming it."
+      },
+      {
+        "id": "hr-3",
+        "question": "Why do you want to join our company?",
+        "category": "Company Motivation",
+        "framework": "Specific company projects/culture + Your alignment + Mutual growth.",
+        "sampleAnswer": "I have been closely following your engineering blog, particularly your recent migration towards event-driven microservices handling distributed transactions at scale. As someone who enjoys system optimization and robust architecture, I want to be in an environment where engineering excellence and innovation are core values. Your company's mentorship culture and massive scale offer the exact challenge where I can contribute immediately while growing into a well-rounded engineer.",
+        "tips": "Mention recent company achievements, engineering initiatives, or products to show you have done deep research."
+      },
+      {
+        "id": "hr-4",
+        "question": "Describe a situation where you had a conflict with a team member. How did you resolve it?",
+        "category": "Behavioral / Conflict Resolution",
+        "framework": "STAR format emphasizing empathy, communication, and objective decision-making.",
+        "sampleAnswer": "During our college capstone project, my teammate and I disagreed on whether to use SQL vs MongoDB for our user analytics service. He favored MongoDB for quick schema setup, while I advocated for PostgreSQL due to strict relational integrity requirements. Rather than arguing, I scheduled a focused discussion where we listed our system's read/write queries and benchmarked write times. Seeing that 85% of queries required complex multi-table joins, we mutually agreed PostgreSQL was the right choice. We delivered the project two weeks ahead of schedule with zero data anomalies.",
+        "tips": "Keep emotions out. Show that you listen to alternate viewpoints and rely on objective data and project success as the guiding principle."
+      },
+      {
+        "id": "hr-5",
+        "question": "Where do you see yourself in 3 to 5 years?",
+        "category": "Career Vision",
+        "framework": "Technical mastery -> Mentorship & architectural ownership.",
+        "sampleAnswer": "In the next 3 to 5 years, I see myself having developed deep domain expertise in designing and deploying resilient distributed systems. I want to be recognized as a reliable engineer who can take high-ambiguity business requirements from whiteboard to production. Additionally, as I grow, I look forward to mentoring incoming campus graduates and contributing to key architectural decisions within the team.",
+        "tips": "Emphasize long-term commitment, continuous skill growth, and progressive responsibility."
+      }
+    ],
+    "questionsToAskInterviewer": [
+      "What does a typical day or sprint cycle look like for an engineer in this team?",
+      "What are the biggest technical challenges the team is currently tackling this quarter?",
+      "How does the company support continuous learning and mentorship for early-career hires?",
+      "What qualities distinguish someone who is good in this role from someone who is truly exceptional?"
+    ],
+    "negotiationTips": [
+      "Always express excitement and gratitude before discussing numbers.",
+      "Base your expectations on industry benchmarks for your tier, location, and role.",
+      "Consider the total compensation package: base salary, joining bonus, performance incentives, stock options/ESOPs, and benefits."
+    ]
+  }
+}

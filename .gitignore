@@ -1,0 +1,40 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.py[cod]
+
+# Database (SQLite - contains user data, don't commit)
+*.sqlite3
+*.db
+
+# Environment & secrets
+.env
+.env.*
+*.secret
+secrets.*
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Node (not used but just in case)
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Logs
+*.log
+
+# Temporary / helper scripts (generated, not needed in repo)
+update_dsa.py
+update_prep.py

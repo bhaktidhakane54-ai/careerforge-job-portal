@@ -1,0 +1,491 @@
+[
+  {
+    "id": "tcs",
+    "name": "Tata Consultancy Services (TCS)",
+    "category": "Service",
+    "roles": ["Ninja (₹3.36 LPA)", "Digital (₹7.0 - 7.5 LPA)", "Prime (₹9.0 - 11.5 LPA)"],
+    "eligibility": {
+      "degrees": ["B.E / B.Tech / M.E / M.Tech / MCA / M.Sc"],
+      "branches": ["All Engineering & IT branches"],
+      "minMarks": "60% or 6.0 CGPA throughout 10th, 12th, Diploma, and Graduation",
+      "backlogs": "Maximum 1 active backlog permitted at test time; 0 backlogs at joining",
+      "gap": "Academic gap up to 24 months permitted with valid justification"
+    },
+    "examPattern": {
+      "platform": "TCS iON",
+      "totalDuration": "165 Minutes",
+      "negativeMarking": "No negative marking",
+      "sections": [
+        {
+          "name": "Numerical Ability (Quant)",
+          "questions": 20,
+          "duration": "25 mins",
+          "topics": "Time & Work, Speed Distance & Time, Percentages, Profit & Loss, Ratio, Permutation & Probability, Number Systems"
+        },
+        {
+          "name": "Verbal Ability (English)",
+          "questions": 25,
+          "duration": "25 mins",
+          "topics": "Reading Comprehension, Sentence Completion, Error Spotting, Para Jumbles"
+        },
+        {
+          "name": "Reasoning Ability (Logical)",
+          "questions": 20,
+          "duration": "25 mins",
+          "topics": "Data Sufficiency, Syllogisms, Blood Relations, Coding-Decoding, Seating Arrangement"
+        },
+        {
+          "name": "Advanced Quant & Reasoning (Digital/Prime Qualifier)",
+          "questions": 15,
+          "duration": "25 mins",
+          "topics": "Higher-level Math, Probability Distributions, Complex Logic puzzles"
+        },
+        {
+          "name": "Hands-on Coding (2 Questions)",
+          "questions": 2,
+          "duration": "65 mins",
+          "topics": "Q1 (Easy-Medium): Array/String manipulation. Q2 (Medium-Hard): Dynamic Programming / Matrix / Graph / Math logic. Languages: C, C++, Java, Python"
+        }
+      ]
+    },
+    "rounds": [
+      {
+        "round": "Round 1: National Qualifier Test (NQT)",
+        "type": "Online Assessment (TCS iON)",
+        "description": "Foundation Section (Aptitude, Verbal, Logical) + Advanced Section (Advanced Quant & Coding). Score determines if you are interviewed for Ninja, Digital, or Prime."
+      },
+      {
+        "round": "Round 2: Technical Interview",
+        "type": "Face-to-Face / Virtual (30 - 45 mins)",
+        "description": "Questions on resume projects, Core CS subjects (OOPs, DBMS, SQL queries, OS), and basic Data Structures (Arrays, Linked Lists, Sorting algorithms)."
+      },
+      {
+        "round": "Round 3: Managerial & HR Round",
+        "type": "Combined / Standalone (20 mins)",
+        "description": "Behavioral scenarios, willingness to relocate, rotational shift agreement, background checks, and company culture fit."
+      }
+    ],
+    "syllabus": [
+      "Aptitude: Work & Wages, Pipes & Cisterns, Mixtures & Alligations, Simple & Compound Interest",
+      "Logical: Clocks & Calendars, Statement-Conclusion, Non-Verbal reasoning",
+      "Technical: OOPs concepts, Normalization, SQL Joins, Pointers/References, Memory Allocation, Basics of Cloud & SDLC"
+    ],
+    "tips": [
+      "Time management on the iON platform is crucial: sections are strictly timed and navigation between sections is restricted.",
+      "In the coding round, focus on edge cases (negative numbers, empty inputs, large integer limits).",
+      "For Digital/Prime cadre, you must solve BOTH coding questions and score >75% in the Advanced Section."
+    ]
+  },
+  {
+    "id": "amazon",
+    "name": "Amazon",
+    "category": "Product",
+    "roles": ["Software Development Engineer - I (SDE-1)", "SDE Intern (₹1.1L/mo stipend)"],
+    "eligibility": {
+      "degrees": ["B.Tech / B.E / M.Tech in CS, IT, ECE or related engineering fields"],
+      "branches": ["CS, IT, Circuit branches preferred"],
+      "minMarks": "6.5+ CGPA or 65% aggregate with no standing backlogs",
+      "backlogs": "0 active backlogs allowed",
+      "gap": "Standard career/education gaps evaluated on merit"
+    },
+    "examPattern": {
+      "platform": "HackerRank",
+      "totalDuration": "105 Minutes",
+      "negativeMarking": "No negative marking",
+      "sections": [
+        {
+          "name": "Online Assessment (OA1 / OA2): Coding",
+          "questions": 2,
+          "duration": "70 mins",
+          "topics": "1 Medium problem (Arrays, Sliding Window, Strings) + 1 Hard problem (Trees, Graphs, Priority Queues, Dynamic Programming)"
+        },
+        {
+          "name": "Work Style Assessment & Leadership Principles (LP)",
+          "questions": 35,
+          "duration": "20 mins",
+          "topics": "Workplace scenarios testing Amazon's 16 Leadership Principles (Customer Obsession, Ownership, Bias for Action, Deliver Results)"
+        },
+        {
+          "name": "Code Explanation / Complexity Survey",
+          "questions": 2,
+          "duration": "15 mins",
+          "topics": "Explaining the Time & Space complexity of your submitted solutions and alternate approaches"
+        }
+      ]
+    },
+    "rounds": [
+      {
+        "round": "Round 1: Online Assessment (OA)",
+        "type": "HackerRank Coding + LP Survey",
+        "description": "2 algorithmic coding problems + Work Simulation & Amazon Leadership Principles assessment."
+      },
+      {
+        "round": "Round 2: Technical Interview 1",
+        "type": "Live Coding (60 mins)",
+        "description": "15 mins of Amazon Leadership Principles (STAR format) + 40 mins live coding (Trees, Graphs, or DP) + 5 mins Q&A."
+      },
+      {
+        "round": "Round 3: Technical Interview 2",
+        "type": "Live Coding & Low Level Design (60 mins)",
+        "description": "DSA problem solving + Object Oriented Design (e.g. Design a Parking Lot, Movie Booking, or File System) + LP questions."
+      },
+      {
+        "round": "Round 4: Bar Raiser Interview",
+        "type": "Executive Evaluation (60 mins)",
+        "description": "Conducted by a certified independent Bar Raiser. Deep dive into past failures, conflicts, high-ambiguity situations, and system architecture."
+      }
+    ],
+    "syllabus": [
+      "DSA: Binary Trees, BST, Graphs (BFS, DFS, Dijkstra), Heaps, Sliding Window, Monotonic Stack, Dynamic Programming (Knapsack, Grid DP)",
+      "CS Fundamentals: Operating Systems (Threads, Deadlocks), DBMS (Transactions, Indexing), OOPs Principles, Basic System Design",
+      "Leadership Principles: Customer Obsession, Ownership, Invent & Simplify, Are Right A Lot, Earn Trust, Deliver Results"
+    ],
+    "tips": [
+      "Leadership Principles carry equal 50% weightage with coding. Prepare 2 STAR stories for every LP.",
+      "Always communicate your thought process aloud before writing code. State brute force, then optimize.",
+      "Calculate and explain exact Time (Big-O) and Space complexity proactively."
+    ]
+  },
+  {
+    "id": "google",
+    "name": "Google",
+    "category": "Product",
+    "roles": ["Software Engineer (L3)", "Associate Software Engineer", "STEP Intern"],
+    "eligibility": {
+      "degrees": ["B.Tech / B.E / M.Tech / MS / PhD in Computer Science or related STEM disciplines"],
+      "branches": ["Open to all branches with demonstrated software competence"],
+      "minMarks": "No strict cut-off; 7.5+ CGPA recommended for on-campus screening",
+      "backlogs": "No active backlogs at time of joining",
+      "gap": "Flexible with reasonable explanation"
+    },
+    "examPattern": {
+      "platform": "Google Internal Online Challenge / HackerEarth",
+      "totalDuration": "60 - 90 Minutes",
+      "negativeMarking": "No negative marking",
+      "sections": [
+        {
+          "name": "Google Online Challenge (GOC)",
+          "questions": 2,
+          "duration": "60 mins",
+          "topics": "Algorithmic challenges (Graph Theory, Combinatorics, Dynamic Programming, Segment Trees, Trie, Greedy)"
+        }
+      ]
+    },
+    "rounds": [
+      {
+        "round": "Round 1: Online Coding Challenge",
+        "type": "Online Assessment (60 mins)",
+        "description": "Challenging algorithmic questions with strict execution time limits (1-2 seconds) and large test sets."
+      },
+      {
+        "round": "Round 2: Technical Interview 1",
+        "type": "Google Docs / Meet (45 mins)",
+        "description": "Pure algorithmic problem solving. You write code in Google Docs without auto-complete or syntax highlighting."
+      },
+      {
+        "round": "Round 3: Technical Interview 2",
+        "type": "Google Docs / Meet (45 mins)",
+        "description": "Focus on data structure optimization, recursion, graphs, or dynamic programming with follow-up constraints."
+      },
+      {
+        "round": "Round 4: Technical Interview 3",
+        "type": "Google Docs / Meet (45 mins)",
+        "description": "Advanced problem solving, memory limits handling, distributed computing considerations."
+      },
+      {
+        "round": "Round 5: Googlyness & Leadership",
+        "type": "Behavioral (45 mins)",
+        "description": "Evaluates intellectual humility, collaboration, navigation of ambiguity, ethical reasoning, and inclusive culture."
+      }
+    ],
+    "syllabus": [
+      "Advanced DSA: Graph Algorithms (Topological sort, Tarjan's, Disjoint Set Union), DP on Trees, Segment Trees, Binary Search on Answer",
+      "Code Quality: Clean code, meaningful variable names, boundary checking, unit test cases"
+    ],
+    "tips": [
+      "Practice coding on a blank Google Doc without IDE assistance.",
+      "Check boundary constraints immediately (e.g. integer overflow, empty tree, disconnected graph).",
+      "Google interviewers evaluate how you respond to hints. Take feedback actively and adapt your solution."
+    ]
+  },
+  {
+    "id": "infosys",
+    "name": "Infosys",
+    "category": "Service",
+    "roles": ["Systems Engineer (₹3.6 LPA)", "Digital Specialist Engineer - DSE (₹6.5 LPA)", "Specialist Programmer - SP (₹9.5 LPA)"],
+    "eligibility": {
+      "degrees": ["B.E / B.Tech / M.E / M.Tech / MCA / M.Sc"],
+      "branches": ["All branches eligible for Systems Engineer; CS/IT/ECE preferred for DSE & SP"],
+      "minMarks": "60% or 6.0 CGPA in 10th, 12th, and throughout Graduation",
+      "backlogs": "0 active backlogs allowed",
+      "gap": "Maximum gap of 2 years allowed"
+    },
+    "examPattern": {
+      "platform": "Infosys Assessment Platform (InfyTQ / HackWithInfy)",
+      "totalDuration": "100 - 180 Minutes",
+      "negativeMarking": "No negative marking (Negative marking in some HackWithInfy rounds)",
+      "sections": [
+        {
+          "name": "Mathematical Thinking & Quant",
+          "questions": 15,
+          "duration": "25 mins",
+          "topics": "Number series, Probability, Combinations, Time & Distance, Data Interpretation"
+        },
+        {
+          "name": "Logical & Abstract Reasoning",
+          "questions": 15,
+          "duration": "25 mins",
+          "topics": "Visual reasoning, Data arrangements, Syllogisms, Coding-Decoding"
+        },
+        {
+          "name": "Verbal Ability",
+          "questions": 20,
+          "duration": "20 mins",
+          "topics": "Grammar, Sentence Correction, Synonyms/Antonyms, Critical Reading"
+        },
+        {
+          "name": "Hands-on Coding (For DSE & SP candidates)",
+          "questions": 3,
+          "duration": "180 mins (HackWithInfy)",
+          "topics": "Q1: Easy (Arrays), Q2: Medium (Strings/Recursion/Trees), Q3: Hard (Graph/DP/Bitmasking)"
+        }
+      ]
+    },
+    "rounds": [
+      {
+        "round": "Round 1: Online Test / HackWithInfy",
+        "type": "Aptitude + Pseudocode + Coding",
+        "description": "System Engineer: Aptitude & Pseudocode. SP/DSE: Algorithmic coding contest."
+      },
+      {
+        "round": "Round 2: Technical Interview",
+        "type": "Virtual Interview (30 mins)",
+        "description": "Covers projects on resume, basic SQL queries (joins, group by), OOPs in Java/Python, and simple coding (reverse string, prime check, palindrome)."
+      },
+      {
+        "round": "Round 3: HR Interview",
+        "type": "Virtual Interview (15 mins)",
+        "description": "Verification of academic documents, communication assessment, adaptability to training at Mysuru campus."
+      }
+    ],
+    "syllabus": [
+      "Aptitude: Data sufficiency, Cryptarithmetic, Percentages, Ratio, Work & Time",
+      "Core CS: Object Oriented Programming, DBMS basics, Data Structures (Arrays, Linked Lists, Stacks, Queues)"
+    ],
+    "tips": [
+      "InfyTQ Certification allows direct entry to DSE/SP interviews if you score >65%.",
+      "In HackWithInfy, solving even 1 full question and 1 partial question often gets you a DSE interview call."
+    ]
+  },
+  {
+    "id": "microsoft",
+    "name": "Microsoft",
+    "category": "Product",
+    "roles": ["Software Engineer (L59/L60)", "Support Engineer", "Internship (₹1.25L/mo stipend)"],
+    "eligibility": {
+      "degrees": ["B.Tech / B.E / M.Tech / Dual Degree in CS, IT, ECE, EE"],
+      "branches": ["Open across branches; strong coding portfolio required"],
+      "minMarks": "7.0+ CGPA or 70% with no backlogs",
+      "backlogs": "0 active backlogs allowed",
+      "gap": "Permitted with valid explanation"
+    },
+    "examPattern": {
+      "platform": "Codility / Mettl",
+      "totalDuration": "90 Minutes",
+      "negativeMarking": "No negative marking",
+      "sections": [
+        {
+          "name": "Coding Assessment",
+          "questions": 3,
+          "duration": "90 mins",
+          "topics": "Medium to Hard coding questions on Arrays, Binary Search, Trees, Graphs, and Hash Tables. Evaluated on correctness, time complexity, and memory efficiency."
+        }
+      ]
+    },
+    "rounds": [
+      {
+        "round": "Round 1: Online Codility Assessment",
+        "type": "Coding (3 Questions, 90 mins)",
+        "description": "Tests both optimal algorithm design and corner case handling."
+      },
+      {
+        "round": "Round 2: Technical Interview 1",
+        "type": "Live Coding (45-60 mins)",
+        "description": "Problem solving with focus on Data Structures (Trees, Linked Lists, Stack) and modular coding."
+      },
+      {
+        "round": "Round 3: Technical Interview 2",
+        "type": "DSA & Low Level Design (60 mins)",
+        "description": "Advanced DSA (Graphs/DP) or OOP System Design (Design an elevator controller, file search engine)."
+      },
+      {
+        "round": "Round 4: Partner / Director Round (AA Round)",
+        "type": "Leadership & Fit (45 mins)",
+        "description": "Evaluates cultural alignment, growth mindset, technical curiosity, and past project impact."
+      }
+    ],
+    "syllabus": [
+      "DSA: Trees (LCA, Path Sum, Traversals), Linked Lists, Graphs (Shortest Path, Cycle Detection), Two Pointers, Trie",
+      "System Fundamentals: Concurrency, Thread safety, Memory management, Operating Systems, Web architecture"
+    ],
+    "tips": [
+      "Microsoft places great emphasis on the 'Growth Mindset' and learning from mistakes.",
+      "Write modular, readable code with descriptive variable names and comments.",
+      "Always dry run test cases with sample and extreme edge inputs."
+    ]
+  },
+  {
+    "id": "accenture",
+    "name": "Accenture",
+    "category": "Service",
+    "roles": ["Associate Software Engineer - ASE (₹4.5 LPA)", "Advanced ASE - FSE (₹6.5 LPA)"],
+    "eligibility": {
+      "degrees": ["B.E / B.Tech / M.E / M.Tech / MCA / M.Sc"],
+      "branches": ["All Engineering streams eligible"],
+      "minMarks": "65% or 6.5 CGPA with no standing backlogs",
+      "backlogs": "0 active backlogs allowed",
+      "gap": "Up to 1 year gap allowed between education levels"
+    },
+    "examPattern": {
+      "platform": "Wheebox / Aon CoCubes",
+      "totalDuration": "135 Minutes",
+      "negativeMarking": "No negative marking",
+      "sections": [
+        {
+          "name": "Cognitive Assessment (Analytical & Quant)",
+          "questions": 50,
+          "duration": "50 mins",
+          "topics": "Critical Thinking, Problem Solving, English Ability, Abstract Reasoning"
+        },
+        {
+          "name": "Technical Assessment (Pseudocode & Fundamentals)",
+          "questions": 40,
+          "duration": "40 mins",
+          "topics": "Pseudocode (bitwise operations, loops, recursion), Networking & Security, Cloud Fundamentals, MS Office"
+        },
+        {
+          "name": "Coding Assessment (Mandatory)",
+          "questions": 2,
+          "duration": "45 mins",
+          "topics": "1 Easy problem (String/Array logic) + 1 Medium problem (Mathematical / Array transformations). Language choices: C, C++, Java, Python"
+        },
+        {
+          "name": "Communication Assessment (Voice Test)",
+          "questions": 6,
+          "duration": "20 mins",
+          "topics": "Reading sentences, Repeating sentences, Story retelling, Short question answers (Automated AI scoring)"
+        }
+      ]
+    },
+    "rounds": [
+      {
+        "round": "Round 1: Cognitive & Technical Assessment",
+        "type": "Online Test (90 mins)",
+        "description": "Stage 1: Cognitive + Technical test. Immediate elimination round. If cleared, you immediately unlock the Coding test."
+      },
+      {
+        "round": "Round 2: Coding Assessment",
+        "type": "Hands-on Coding (45 mins)",
+        "description": "2 programming questions. Solving both unlocks the Advanced ASE (₹6.5 LPA) interview pipeline."
+      },
+      {
+        "round": "Round 3: Communication Assessment",
+        "type": "Automated Audio Test (20 mins)",
+        "description": "Non-elimination round assessing fluency, pronunciation, grammar, and vocabulary."
+      },
+      {
+        "round": "Round 4: Technical & HR Interview",
+        "type": "Virtual Interview (20 - 30 mins)",
+        "description": "Questions on final year project, basic concepts (OOPs, SQL), team player scenarios, and willingness to work across locations."
+      }
+    ],
+    "syllabus": [
+      "Pseudocode: Bitwise operators (AND, OR, XOR), loop iterations, array index manipulation",
+      "Cloud & Networks: SaaS/PaaS/IaaS differences, OSI layers, IP addressing, basic firewalls",
+      "Aptitude: Syllogism, Blood relations, Sitting arrangement, Profit & loss, Percentages"
+    ],
+    "tips": [
+      "Practice pseudocode questions thoroughly; this section is where most candidates fail to clear the cutoff.",
+      "Ensure a clear headset and quiet environment for the Automated Communication round.",
+      "Be prepared to explain your major project role and the exact tech stack used."
+    ]
+  },
+  {
+    "id": "wipro",
+    "name": "Wipro",
+    "category": "Service",
+    "roles": ["Project Engineer - Elite NTH (₹3.50 LPA)", "Turbo Engineer (₹6.50 LPA)"],
+    "eligibility": {
+      "degrees": ["B.E / B.Tech / M.E / M.Tech / 5-Year Integrated M.Tech"],
+      "branches": ["All Engineering streams (except Agriculture, Food Tech, Textile, Fashion)"],
+      "minMarks": "60% or 6.0 CGPA throughout 10th, 12th, and Graduation",
+      "backlogs": "Max 1 active backlog permitted during assessment; 0 backlogs at joining",
+      "gap": "Up to 3 years gap in education allowed between 10th and graduation completion"
+    },
+    "examPattern": {
+      "platform": "Superset / AMCAT / Aon CoCubes",
+      "totalDuration": "128 Minutes",
+      "negativeMarking": "No negative marking (Standard adaptive section cutoff)",
+      "sections": [
+        {
+          "name": "Quantitative Aptitude",
+          "questions": 16,
+          "duration": "16 mins",
+          "topics": "Time and Work, Speed Distance & Time, Profit & Loss, Percentages, Ratio, Number Systems"
+        },
+        {
+          "name": "Logical Reasoning",
+          "questions": 14,
+          "duration": "14 mins",
+          "topics": "Blood Relations, Coding-Decoding, Direction Sense, Syllogisms, Analogy, Series"
+        },
+        {
+          "name": "Verbal Ability (English)",
+          "questions": 22,
+          "duration": "18 mins",
+          "topics": "Sentence Correction, Error Spotting, Reading Comprehension, Synonyms & Antonyms"
+        },
+        {
+          "name": "Written Communication (Essay Writing)",
+          "questions": 1,
+          "duration": "20 mins",
+          "topics": "Write a 200-400 word essay on a current social or technical topic (Evaluated by AI grading engine)"
+        },
+        {
+          "name": "Hands-on Coding",
+          "questions": 2,
+          "duration": "60 mins",
+          "topics": "Q1 (Easy): Basic array manipulation/strings. Q2 (Medium): Dynamic Programming, Matrix, or String recursion. Languages: Java, Python, C++, C"
+        }
+      ]
+    },
+    "rounds": [
+      {
+        "round": "Round 1: Wipro Elite National Talent Hunt (NTH)",
+        "type": "Online Test (128 mins)",
+        "description": "Adaptive aptitude test (Quant, Logical, Verbal) + Essay Writing + 2 Coding problems. High performance on both coding questions qualifies for Turbo (₹6.5 LPA) interview."
+      },
+      {
+        "round": "Round 2: Technical Interview",
+        "type": "Virtual Interview (30-40 mins)",
+        "description": "In-depth review of academic projects, Core CS (OOPs, DBMS, basic SQL queries), programming language fundamentals, and basic data structures (Arrays, Strings, Linked Lists)."
+      },
+      {
+        "round": "Round 3: HR Interview",
+        "type": "Virtual Interview (15-20 mins)",
+        "description": "Communication assessment, willingness to relocate to any Wipro campus, night shifts agreement, and career aspirations."
+      }
+    ],
+    "syllabus": [
+      "Quant: Averages, Simple/Compound Interest, Time & Work, Speed Distance Time, Profit & Loss, Permutations",
+      "Logical: Syllogism, Blood Relations, Statement & Assumptions, Seating Arrangements, Coding Decoding",
+      "Verbal: Grammar rules, Prepositions, Conjunctions, Idioms, Reading passages",
+      "Coding: Arrays, Two Pointers, String manipulation, Recursion, Basic Sorting and Searching"
+    ],
+    "tips": [
+      "In the Essay writing test, maintain strict grammar, correct punctuation, and use standard paragraphs; automated NLP evaluators penalize spelling and spacing mistakes heavily.",
+      "Solving 1 coding problem guarantees an Elite interview call; solving both coding problems with optimal time complexity makes you eligible for the Turbo cadre (₹6.5 LPA).",
+      "Review your resume projects thoroughly, including your exact personal contributions and database schemas."
+    ]
+  }
+]

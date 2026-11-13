@@ -1,0 +1,636 @@
+[
+  {
+    "id": "dsa-arr-1",
+    "topic": "Arrays",
+    "title": "Best Time to Buy and Sell Stock",
+    "difficulty": "Easy",
+    "companies": [
+      "Amazon",
+      "Microsoft",
+      "Flipkart",
+      "Accenture",
+      "TCS"
+    ],
+    "pattern": "One-pass Greedy",
+    "description": "You are given an array prices where prices[i] is the price of a given stock on the ith day. You want to maximize your profit by choosing a single day to buy one stock and choosing a different day in the future to sell that stock. Return the maximum profit you can achieve.",
+    "example": "Input: prices = [7,1,5,3,6,4]\nOutput: 5\nExplanation: Buy on day 2 (price = 1) and sell on day 5 (price = 6), profit = 6 - 1 = 5.",
+    "hints": [
+      "Track the minimum price seen so far as you iterate through the array."
+    ],
+    "approach": "Keep track of minPrice seen so far. At each step, calculate potential profit = price - minPrice, and update maxProfit. Update minPrice = min(minPrice, price).",
+    "complexity": "Time: O(N) | Space: O(1)",
+    "code": {
+      "cpp": "int maxProfit(vector<int>& prices) {\n    int minPrice = INT_MAX, maxProfit = 0;\n    for (int p : prices) {\n        minPrice = min(minPrice, p);\n        maxProfit = max(maxProfit, p - minPrice);\n    }\n    return maxProfit;\n}",
+      "java": "public int maxProfit(int[] prices) {\n    int minPrice = Integer.MAX_VALUE, maxProfit = 0;\n    for (int p : prices) {\n        if (p < minPrice) minPrice = p;\n        else if (p - minPrice > maxProfit) maxProfit = p - minPrice;\n    }\n    return maxProfit;\n}",
+      "python": "def maxProfit(prices: list[int]) -> int:\n    min_p, max_prof = float('inf'), 0\n    for p in prices:\n        min_p = min(min_p, p)\n        max_prof = max(max_prof, p - min_p)\n    return max_prof"
+    }
+  },
+  {
+    "id": "dsa-arr-2",
+    "topic": "Arrays",
+    "title": "Maximum Subarray (Kadane's Algorithm)",
+    "difficulty": "Medium",
+    "companies": [
+      "Google",
+      "Amazon",
+      "Microsoft",
+      "Infosys",
+      "Adobe"
+    ],
+    "pattern": "Kadane's Algorithm",
+    "description": "Given an integer array nums, find the subarray with the largest sum, and return its sum.",
+    "example": "Input: nums = [-2,1,-3,4,-1,2,1,-5,4]\nOutput: 6\nExplanation: The subarray [4,-1,2,1] has the largest sum 6.",
+    "hints": [
+      "If the current running sum becomes negative, it's better to restart from the next element."
+    ],
+    "approach": "Maintain currSum and maxSum. Add each element to currSum. Update maxSum = max(maxSum, currSum). If currSum drops below 0, reset currSum to 0.",
+    "complexity": "Time: O(N) | Space: O(1)",
+    "code": {
+      "cpp": "int maxSubArray(vector<int>& nums) {\n    int currSum = 0, maxSum = nums[0];\n    for (int x : nums) {\n        currSum += x;\n        maxSum = max(maxSum, currSum);\n        if (currSum < 0) currSum = 0;\n    }\n    return maxSum;\n}",
+      "java": "public int maxSubArray(int[] nums) {\n    int curr = 0, max = nums[0];\n    for (int x : nums) {\n        curr += x;\n        max = Math.max(max, curr);\n        if (curr < 0) curr = 0;\n    }\n    return max;\n}",
+      "python": "def maxSubArray(nums: list[int]) -> int:\n    curr, max_sum = 0, nums[0]\n    for x in nums:\n        curr += x\n        max_sum = max(max_sum, curr)\n        if curr < 0: curr = 0\n    return max_sum"
+    }
+  },
+  {
+    "id": "dsa-arr-3",
+    "topic": "Arrays",
+    "title": "Product of Array Except Self",
+    "difficulty": "Medium",
+    "companies": [
+      "Amazon",
+      "Google",
+      "Microsoft",
+      "Wipro Turbo"
+    ],
+    "pattern": "Prefix and Suffix Products",
+    "description": "Given an integer array nums, return an array answer such that answer[i] is equal to the product of all the elements of nums except nums[i], without using the division operation.",
+    "example": "Input: nums = [1,2,3,4]\nOutput: [24,12,8,6]",
+    "hints": [
+      "Can you compute the prefix products from left to right and suffix products from right to left in a single result array?"
+    ],
+    "approach": "First compute prefix products into output array. Then traverse backwards with a running suffix product variable, multiplying into output.",
+    "complexity": "Time: O(N) | Space: O(1) auxiliary",
+    "code": {
+      "cpp": "vector<int> productExceptSelf(vector<int>& nums) {\n    int n = nums.size();\n    vector<int> res(n, 1);\n    for (int i = 1; i < n; ++i) res[i] = res[i - 1] * nums[i - 1];\n    int right = 1;\n    for (int i = n - 1; i >= 0; --i) {\n        res[i] *= right;\n        right *= nums[i];\n    }\n    return res;\n}",
+      "java": "public int[] productExceptSelf(int[] nums) {\n    int n = nums.length;\n    int[] res = new int[n];\n    res[0] = 1;\n    for (int i = 1; i < n; i++) res[i] = res[i - 1] * nums[i - 1];\n    int right = 1;\n    for (int i = n - 1; i >= 0; i--) {\n        res[i] *= right;\n        right *= nums[i];\n    }\n    return res;\n}",
+      "python": "def productExceptSelf(nums: list[int]) -> list[int]:\n    n = len(nums)\n    res = [1] * n\n    for i in range(1, n):\n        res[i] = res[i - 1] * nums[i - 1]\n    right = 1\n    for i in range(n - 1, -1, -1):\n        res[i] *= right\n        right *= nums[i]\n    return res"
+    }
+  },
+  {
+    "id": "dsa-str-1",
+    "topic": "Strings",
+    "title": "Valid Palindrome",
+    "difficulty": "Easy",
+    "companies": [
+      "Microsoft",
+      "Amazon",
+      "Accenture",
+      "TCS",
+      "Wipro"
+    ],
+    "pattern": "Two Pointers",
+    "description": "A phrase is a palindrome if, after converting all uppercase letters into lowercase letters and removing all non-alphanumeric characters, it reads the same forward and backward.",
+    "example": "Input: s = 'A man, a plan, a canal: Panama'\nOutput: true\nExplanation: 'amanaplanacanalpanama' is a palindrome.",
+    "hints": [
+      "Place one pointer at start and one at end. Skip non-alphanumeric characters."
+    ],
+    "approach": "Use left and right pointers. Increment left while non-alphanumeric, decrement right while non-alphanumeric. Compare lowercased characters.",
+    "complexity": "Time: O(N) | Space: O(1)",
+    "code": {
+      "cpp": "bool isPalindrome(string s) {\n    int l = 0, r = s.size() - 1;\n    while (l < r) {\n        while (l < r && !isalnum(s[l])) l++;\n        while (l < r && !isalnum(s[r])) r--;\n        if (tolower(s[l]) != tolower(s[r])) return false;\n        l++; r--;\n    }\n    return true;\n}",
+      "java": "public boolean isPalindrome(String s) {\n    int l = 0, r = s.length() - 1;\n    while (l < r) {\n        while (l < r && !Character.isLetterOrDigit(s.charAt(l))) l++;\n        while (l < r && !Character.isLetterOrDigit(s.charAt(r))) r--;\n        if (Character.toLowerCase(s.charAt(l)) != Character.toLowerCase(s.charAt(r))) return false;\n        l++; r--;\n    }\n    return true;\n}",
+      "python": "def isPalindrome(s: str) -> bool:\n    clean = [c.lower() for c in s if c.isalnum()]\n    return clean == clean[::-1]"
+    }
+  },
+  {
+    "id": "dsa-str-2",
+    "topic": "Strings",
+    "title": "Longest Substring Without Repeating Characters",
+    "difficulty": "Medium",
+    "companies": [
+      "Amazon",
+      "Google",
+      "Adobe",
+      "Swiggy"
+    ],
+    "pattern": "Sliding Window",
+    "description": "Given a string s, find the length of the longest substring without repeating characters.",
+    "example": "Input: s = 'abcabcbb'\nOutput: 3\nExplanation: The answer is 'abc', with length 3.",
+    "hints": [
+      "Use a sliding window with a hash map recording each character's last seen index."
+    ],
+    "approach": "Maintain a left pointer l. As right pointer r advances, check if s[r] was seen at index >= l. If so, move l = lastSeen[s[r]] + 1. Update maxLength = max(maxLength, r - l + 1).",
+    "complexity": "Time: O(N) | Space: O(min(M, N))",
+    "code": {
+      "cpp": "int lengthOfLongestSubstring(string s) {\n    vector<int> last(256, -1);\n    int maxLen = 0, l = 0;\n    for (int r = 0; r < s.size(); ++r) {\n        if (last[s[r]] >= l) l = last[s[r]] + 1;\n        last[s[r]] = r;\n        maxLen = max(maxLen, r - l + 1);\n    }\n    return maxLen;\n}",
+      "java": "public int lengthOfLongestSubstring(String s) {\n    int[] last = new int[256];\n    Arrays.fill(last, -1);\n    int maxLen = 0, l = 0;\n    for (int r = 0; r < s.length(); r++) {\n        char c = s.charAt(r);\n        if (last[c] >= l) l = last[c] + 1;\n        last[c] = r;\n        maxLen = Math.max(maxLen, r - l + 1);\n    }\n    return maxLen;\n}",
+      "python": "def lengthOfLongestSubstring(s: str) -> int:\n    last = {}\n    max_len = l = 0\n    for r, c in enumerate(s):\n        if c in last and last[c] >= l:\n            l = last[c] + 1\n        last[c] = r\n        max_len = max(max_len, r - l + 1)\n    return max_len"
+    }
+  },
+  {
+    "id": "dsa-ll-1",
+    "topic": "Linked Lists",
+    "title": "Reverse Linked List",
+    "difficulty": "Easy",
+    "companies": [
+      "Microsoft",
+      "Amazon",
+      "TCS",
+      "Infosys",
+      "Adobe"
+    ],
+    "pattern": "In-place Pointer Manipulation",
+    "description": "Given the head of a singly linked list, reverse the list, and return the reversed list.",
+    "example": "Input: head = [1,2,3,4,5]\nOutput: [5,4,3,2,1]",
+    "hints": [
+      "Use three pointers: prev, curr, and next."
+    ],
+    "approach": "Initialize prev = nullptr, curr = head. Iterate while curr != nullptr: store next = curr->next, redirect curr->next = prev, move prev = curr, curr = next.",
+    "complexity": "Time: O(N) | Space: O(1)",
+    "code": {
+      "cpp": "ListNode* reverseList(ListNode* head) {\n    ListNode *prev = nullptr, *curr = head;\n    while (curr) {\n        ListNode* nxt = curr->next;\n        curr->next = prev;\n        prev = curr;\n        curr = nxt;\n    }\n    return prev;\n}",
+      "java": "public ListNode reverseList(ListNode head) {\n    ListNode prev = null, curr = head;\n    while (curr != null) {\n        ListNode next = curr.next;\n        curr.next = prev;\n        prev = curr;\n        curr = next;\n    }\n    return prev;\n}",
+      "python": "def reverseList(head: Optional[ListNode]) -> Optional[ListNode]:\n    prev, curr = None, head\n    while curr:\n        nxt = curr.next\n        curr.next = prev\n        prev = curr\n        curr = nxt\n    return prev"
+    }
+  },
+  {
+    "id": "dsa-ll-2",
+    "topic": "Linked Lists",
+    "title": "Linked List Cycle Detection",
+    "difficulty": "Easy",
+    "companies": [
+      "Amazon",
+      "Google",
+      "Microsoft",
+      "Accenture"
+    ],
+    "pattern": "Floyd's Tortoise and Hare",
+    "description": "Given head, the head of a linked list, determine if the linked list has a cycle in it.",
+    "example": "Input: head = [3,2,0,-4], pos = 1\nOutput: true\nExplanation: There is a cycle in the linked list where tail connects to 1st node.",
+    "hints": [
+      "Fast pointer moves 2 steps, slow pointer moves 1 step."
+    ],
+    "approach": "Advance slow by 1 step, fast by 2 steps. If fast or fast->next becomes null, there is no cycle. If slow == fast at any point, a cycle exists.",
+    "complexity": "Time: O(N) | Space: O(1)",
+    "code": {
+      "cpp": "bool hasCycle(ListNode *head) {\n    ListNode *slow = head, *fast = head;\n    while (fast && fast->next) {\n        slow = slow->next;\n        fast = fast->next->next;\n        if (slow == fast) return true;\n    }\n    return false;\n}",
+      "java": "public boolean hasCycle(ListNode head) {\n    ListNode slow = head, fast = head;\n    while (fast != null && fast.next != null) {\n        slow = slow.next;\n        fast = fast.next.next;\n        if (slow == fast) return true;\n    }\n    return false;\n}",
+      "python": "def hasCycle(head: Optional[ListNode]) -> bool:\n    slow = fast = head\n    while fast and fast.next:\n        slow = slow.next\n        fast = fast.next.next\n        if slow == fast: return True\n    return False"
+    }
+  },
+  {
+    "id": "dsa-sq-1",
+    "topic": "Stacks and Queues",
+    "title": "Valid Parentheses",
+    "difficulty": "Easy",
+    "companies": [
+      "Amazon",
+      "Google",
+      "Microsoft",
+      "TCS",
+      "Infosys"
+    ],
+    "pattern": "Stack Matching",
+    "description": "Given a string s containing '(', ')', '{', '}', '[' and ']', determine if the input string is valid. Open brackets must be closed by the same type of brackets in the correct order.",
+    "example": "Input: s = '()[]{}'\nOutput: true",
+    "hints": [
+      "Push open brackets to stack. When encountering a closing bracket, check top."
+    ],
+    "approach": "Use a stack. If opening bracket, push matching closing bracket. If closing, verify stack is non-empty and top matches.",
+    "complexity": "Time: O(N) | Space: O(N)",
+    "code": {
+      "cpp": "bool isValid(string s) {\n    stack<char> st;\n    for (char c : s) {\n        if (c == '(') st.push(')');\n        else if (c == '{') st.push('}');\n        else if (c == '[') st.push(']');\n        else if (st.empty() || st.top() != c) return false;\n        else st.pop();\n    }\n    return st.empty();\n}",
+      "java": "public boolean isValid(String s) {\n    Deque<Character> st = new ArrayDeque<>();\n    for (char c : s.toCharArray()) {\n        if (c == '(') st.push(')');\n        else if (c == '{') st.push('}');\n        else if (c == '[') st.push(']');\n        else if (st.isEmpty() || st.pop() != c) return false;\n    }\n    return st.isEmpty();\n}",
+      "python": "def isValid(s: str) -> bool:\n    mapping = {')': '(', '}': '{', ']': '['}\n    st = []\n    for c in s:\n        if c in mapping:\n            top = st.pop() if st else '#'\n            if mapping[c] != top: return False\n        else:\n            st.append(c)\n    return not st"
+    }
+  },
+  {
+    "id": "dsa-sq-2",
+    "topic": "Stacks and Queues",
+    "title": "Daily Temperatures",
+    "difficulty": "Medium",
+    "companies": [
+      "Amazon",
+      "Google",
+      "Microsoft"
+    ],
+    "pattern": "Monotonic Stack",
+    "description": "Given an array of integers temperatures represents the daily temperatures, return an array answer such that answer[i] is the number of days you have to wait after the ith day to get a warmer temperature. If there is no future day for which this is possible, keep answer[i] == 0.",
+    "example": "Input: temperatures = [73,74,75,71,69,72,76,73]\nOutput: [1,1,4,2,1,1,0,0]",
+    "hints": [
+      "Store indices on a decreasing monotonic stack."
+    ],
+    "approach": "Iterate through array. While current temperature > temperature at stack top index, pop and set answer[top] = current index - top index. Then push current index.",
+    "complexity": "Time: O(N) | Space: O(N)",
+    "code": {
+      "cpp": "vector<int> dailyTemperatures(vector<int>& temperatures) {\n    int n = temperatures.size();\n    vector<int> res(n, 0);\n    stack<int> st;\n    for (int i = 0; i < n; ++i) {\n        while (!st.empty() && temperatures[i] > temperatures[st.top()]) {\n            int prev = st.top(); st.pop();\n            res[prev] = i - prev;\n        }\n        st.push(i);\n    }\n    return res;\n}",
+      "java": "public int[] dailyTemperatures(int[] temperatures) {\n    int n = temperatures.length;\n    int[] res = new int[n];\n    Deque<Integer> st = new ArrayDeque<>();\n    for (int i = 0; i < n; i++) {\n        while (!st.isEmpty() && temperatures[i] > temperatures[st.peek()]) {\n            int prev = st.pop();\n            res[prev] = i - prev;\n        }\n        st.push(i);\n    }\n    return res;\n}",
+      "python": "def dailyTemperatures(temperatures: list[int]) -> list[int]:\n    n = len(temperatures)\n    res = [0] * n\n    st = []\n    for i, t in enumerate(temperatures):\n        while st and t > temperatures[st[-1]]:\n            prev = st.pop()\n            res[prev] = i - prev\n        st.append(i)\n    return res"
+    }
+  },
+  {
+    "id": "dsa-ss-1",
+    "topic": "Searching and Sorting",
+    "title": "Sort Colors (Dutch National Flag)",
+    "difficulty": "Medium",
+    "companies": [
+      "Amazon",
+      "Microsoft",
+      "TCS Prime",
+      "Wipro"
+    ],
+    "pattern": "Three-way Partitioning",
+    "description": "Given an array nums with n objects colored red, white, or blue, sort them in-place so that objects of the same color are adjacent, with colors in the order red, white, and blue (0, 1, and 2).",
+    "example": "Input: nums = [2,0,2,1,1,0]\nOutput: [0,0,1,1,2,2]",
+    "hints": [
+      "Use three pointers: low, mid, and high."
+    ],
+    "approach": "Maintain low = 0, mid = 0, high = n - 1. If nums[mid] == 0, swap(low, mid), low++, mid++. If nums[mid] == 1, mid++. If nums[mid] == 2, swap(mid, high), high--.",
+    "complexity": "Time: O(N) | Space: O(1)",
+    "code": {
+      "cpp": "void sortColors(vector<int>& nums) {\n    int low = 0, mid = 0, high = nums.size() - 1;\n    while (mid <= high) {\n        if (nums[mid] == 0) swap(nums[low++], nums[mid++]);\n        else if (nums[mid] == 1) mid++;\n        else swap(nums[mid], nums[high--]);\n    }\n}",
+      "java": "public void sortColors(int[] nums) {\n    int low = 0, mid = 0, high = nums.length - 1;\n    while (mid <= high) {\n        if (nums[mid] == 0) {\n            int t = nums[low]; nums[low++] = nums[mid]; nums[mid++] = t;\n        } else if (nums[mid] == 1) {\n            mid++;\n        } else {\n            int t = nums[mid]; nums[mid] = nums[high]; nums[high--] = t;\n        }\n    }\n}",
+      "python": "def sortColors(nums: list[int]) -> None:\n    low, mid, high = 0, 0, len(nums) - 1\n    while mid <= high:\n        if nums[mid] == 0:\n            nums[low], nums[mid] = nums[mid], nums[low]\n            low += 1; mid += 1\n        elif nums[mid] == 1:\n            mid += 1\n        else:\n            nums[mid], nums[high] = nums[high], nums[mid]\n            high -= 1"
+    }
+  },
+  {
+    "id": "dsa-ss-2",
+    "topic": "Searching and Sorting",
+    "title": "Merge Intervals",
+    "difficulty": "Medium",
+    "companies": [
+      "Google",
+      "Amazon",
+      "Microsoft",
+      "Uber"
+    ],
+    "pattern": "Interval Sorting",
+    "description": "Given an array of intervals where intervals[i] = [starti, endi], merge all overlapping intervals, and return an array of the non-overlapping intervals that cover all the intervals in the input.",
+    "example": "Input: intervals = [[1,3],[2,6],[8,10],[15,18]]\nOutput: [[1,6],[8,10],[15,18]]\nExplanation: Since intervals [1,3] and [2,6] overlap, merge them into [1,6].",
+    "hints": [
+      "Sort intervals by their start times first."
+    ],
+    "approach": "Sort intervals by start. Iterate through: if merged is empty or current interval doesn't overlap with merged.back(), push it. Otherwise, update merged.back()[1] = max(merged.back()[1], current[1]).",
+    "complexity": "Time: O(N log N) | Space: O(N)",
+    "code": {
+      "cpp": "vector<vector<int>> merge(vector<vector<int>>& intervals) {\n    if (intervals.empty()) return {};\n    sort(intervals.begin(), intervals.end());\n    vector<vector<int>> merged = {intervals[0]};\n    for (int i = 1; i < intervals.size(); ++i) {\n        if (intervals[i][0] <= merged.back()[1])\n            merged.back()[1] = max(merged.back()[1], intervals[i][1]);\n        else\n            merged.push_back(intervals[i]);\n    }\n    return merged;\n}",
+      "java": "public int[][] merge(int[][] intervals) {\n    if (intervals.length <= 1) return intervals;\n    Arrays.sort(intervals, (a, b) -> Integer.compare(a[0], b[0]));\n    List<int[]> res = new ArrayList<>();\n    int[] curr = intervals[0];\n    res.add(curr);\n    for (int[] interval : intervals) {\n        if (interval[0] <= curr[1]) curr[1] = Math.max(curr[1], interval[1]);\n        else { curr = interval; res.add(curr); }\n    }\n    return res.toArray(new int[res.size()][]);\n}",
+      "python": "def merge(intervals: list[list[int]]) -> list[list[int]]:\n    intervals.sort(key=lambda x: x[0])\n    merged = []\n    for interval in intervals:\n        if not merged or merged[-1][1] < interval[0]:\n            merged.append(interval)\n        else:\n            merged[-1][1] = max(merged[-1][1], interval[1])\n    return merged"
+    }
+  },
+  {
+    "id": "dsa-bs-1",
+    "topic": "Binary Search",
+    "title": "Binary Search",
+    "difficulty": "Easy",
+    "companies": [
+      "Amazon",
+      "Microsoft",
+      "TCS",
+      "Accenture"
+    ],
+    "pattern": "Classic Binary Search",
+    "description": "Given an array of integers nums which is sorted in ascending order, and an integer target, write a function to search target in nums. If target exists, then return its index. Otherwise, return -1.",
+    "example": "Input: nums = [-1,0,3,5,9,12], target = 9\nOutput: 4",
+    "hints": [
+      "Calculate mid = low + (high - low) / 2 to avoid overflow."
+    ],
+    "approach": "Maintain low and high pointers. Check if nums[mid] == target. If target < nums[mid], high = mid - 1; else low = mid + 1.",
+    "complexity": "Time: O(log N) | Space: O(1)",
+    "code": {
+      "cpp": "int search(vector<int>& nums, int target) {\n    int l = 0, r = nums.size() - 1;\n    while (l <= r) {\n        int m = l + (r - l) / 2;\n        if (nums[m] == target) return m;\n        if (nums[m] < target) l = m + 1;\n        else r = m - 1;\n    }\n    return -1;\n}",
+      "java": "public int search(int[] nums, int target) {\n    int l = 0, r = nums.length - 1;\n    while (l <= r) {\n        int m = l + (r - l) / 2;\n        if (nums[m] == target) return m;\n        if (nums[m] < target) l = m + 1;\n        else r = m - 1;\n    }\n    return -1;\n}",
+      "python": "def search(nums: list[int], target: int) -> int:\n    l, r = 0, len(nums) - 1\n    while l <= r:\n        m = (l + r) // 2\n        if nums[m] == target: return m\n        elif nums[m] < target: l = m + 1\n        else: r = m - 1\n    return -1"
+    }
+  },
+  {
+    "id": "dsa-bs-2",
+    "topic": "Binary Search",
+    "title": "Search in Rotated Sorted Array",
+    "difficulty": "Medium",
+    "companies": [
+      "Google",
+      "Amazon",
+      "Microsoft",
+      "Adobe"
+    ],
+    "pattern": "Modified Binary Search",
+    "description": "There is an integer array nums sorted in ascending order (with distinct values), rotated at an unknown pivot index. Given nums and target, return the index of target, or -1 if not in nums.",
+    "example": "Input: nums = [4,5,6,7,0,1,2], target = 0\nOutput: 4",
+    "hints": [
+      "At least one half of the array is always normally sorted."
+    ],
+    "approach": "Determine which half is normally sorted: if nums[low] <= nums[mid], left half is sorted. Check if target lies within sorted half; update low or high accordingly.",
+    "complexity": "Time: O(log N) | Space: O(1)",
+    "code": {
+      "cpp": "int search(vector<int>& nums, int target) {\n    int l = 0, r = nums.size() - 1;\n    while (l <= r) {\n        int m = l + (r - l) / 2;\n        if (nums[m] == target) return m;\n        if (nums[l] <= nums[m]) {\n            if (target >= nums[l] && target < nums[m]) r = m - 1;\n            else l = m + 1;\n        } else {\n            if (target > nums[m] && target <= nums[r]) l = m + 1;\n            else r = m - 1;\n        }\n    }\n    return -1;\n}",
+      "java": "public int search(int[] nums, int target) {\n    int l = 0, r = nums.length - 1;\n    while (l <= r) {\n        int m = l + (r - l) / 2;\n        if (nums[m] == target) return m;\n        if (nums[l] <= nums[m]) {\n            if (target >= nums[l] && target < nums[m]) r = m - 1;\n            else l = m + 1;\n        } else {\n            if (target > nums[m] && target <= nums[r]) l = m + 1;\n            else r = m - 1;\n        }\n    }\n    return -1;\n}",
+      "python": "def search(nums: list[int], target: int) -> int:\n    l, r = 0, len(nums) - 1\n    while l <= r:\n        m = (l + r) // 2\n        if nums[m] == target: return m\n        if nums[l] <= nums[m]:\n            if nums[l] <= target < nums[m]: r = m - 1\n            else: l = m + 1\n        else:\n            if nums[m] < target <= nums[r]: l = m + 1\n            else: r = m - 1\n    return -1"
+    }
+  },
+  {
+    "id": "dsa-rb-1",
+    "topic": "Recursion and Backtracking",
+    "title": "Subsets (Power Set)",
+    "difficulty": "Medium",
+    "companies": [
+      "Amazon",
+      "Google",
+      "Microsoft",
+      "Infosys SP"
+    ],
+    "pattern": "Backtracking / Combinations",
+    "description": "Given an integer array nums of unique elements, return all possible subsets (the power set). The solution set must not contain duplicate subsets.",
+    "example": "Input: nums = [1,2,3]\nOutput: [[],[1],[2],[1,2],[3],[1,3],[2,3],[1,2,3]]",
+    "hints": [
+      "At each element, you have two choices: include it or exclude it."
+    ],
+    "approach": "Use backtracking DFS. Append current state to result. Loop from current index to end, push element, recurse with next index, pop element (backtrack).",
+    "complexity": "Time: O(2^N) | Space: O(N) recursion stack",
+    "code": {
+      "cpp": "void dfs(int start, vector<int>& nums, vector<int>& path, vector<vector<int>>& res) {\n    res.push_back(path);\n    for (int i = start; i < nums.size(); ++i) {\n        path.push_back(nums[i]);\n        dfs(i + 1, nums, path, res);\n        path.pop_back();\n    }\n}\nvector<vector<int>> subsets(vector<int>& nums) {\n    vector<vector<int>> res;\n    vector<int> path;\n    dfs(0, nums, path, res);\n    return res;\n}",
+      "java": "public List<List<Integer>> subsets(int[] nums) {\n    List<List<Integer>> res = new ArrayList<>();\n    backtrack(0, nums, new ArrayList<>(), res);\n    return res;\n}\nprivate void backtrack(int start, int[] nums, List<Integer> path, List<List<Integer>> res) {\n    res.add(new ArrayList<>(path));\n    for (int i = start; i < nums.length; i++) {\n        path.add(nums[i]);\n        backtrack(i + 1, nums, path, res);\n        path.remove(path.size() - 1);\n    }\n}",
+      "python": "def subsets(nums: list[int]) -> list[list[int]]:\n    res = []\n    def backtrack(start, path):\n        res.append(list(path))\n        for i in range(start, len(nums)):\n            path.append(nums[i])\n            backtrack(i + 1, path)\n            path.pop()\n    backtrack(0, [])\n    return res"
+    }
+  },
+  {
+    "id": "dsa-rb-2",
+    "topic": "Recursion and Backtracking",
+    "title": "Combination Sum",
+    "difficulty": "Medium",
+    "companies": [
+      "Amazon",
+      "Google",
+      "Adobe",
+      "Flipkart"
+    ],
+    "pattern": "Backtracking Unbounded",
+    "description": "Given an array of distinct integers candidates and a target integer target, return a list of all unique combinations of candidates where the chosen numbers sum to target. The same number may be chosen unlimited times.",
+    "example": "Input: candidates = [2,3,6,7], target = 7\nOutput: [[2,2,3],[7]]",
+    "hints": [
+      "Recurse while remaining target >= 0. Don't increment index when using the same number."
+    ],
+    "approach": "Backtracking: if target == 0, save combination. If target < 0, return. For each candidate starting at index i, choose candidates[i], recurse with remaining target - candidates[i], backtrack.",
+    "complexity": "Time: O(2^target) | Space: O(target)",
+    "code": {
+      "cpp": "void dfs(int idx, int target, vector<int>& c, vector<int>& path, vector<vector<int>>& res) {\n    if (target == 0) { res.push_back(path); return; }\n    if (target < 0) return;\n    for (int i = idx; i < c.size(); ++i) {\n        path.push_back(c[i]);\n        dfs(i, target - c[i], c, path, res);\n        path.pop_back();\n    }\n}\nvector<vector<int>> combinationSum(vector<int>& c, int target) {\n    vector<vector<int>> res; vector<int> path;\n    dfs(0, target, c, path, res);\n    return res;\n}",
+      "java": "public List<List<Integer>> combinationSum(int[] candidates, int target) {\n    List<List<Integer>> res = new ArrayList<>();\n    backtrack(0, target, candidates, new ArrayList<>(), res);\n    return res;\n}\nprivate void backtrack(int start, int remain, int[] c, List<Integer> path, List<List<Integer>> res) {\n    if (remain == 0) { res.add(new ArrayList<>(path)); return; }\n    if (remain < 0) return;\n    for (int i = start; i < c.length; i++) {\n        path.add(c[i]);\n        backtrack(i, remain - c[i], c, path, res);\n        path.remove(path.size() - 1);\n    }\n}",
+      "python": "def combinationSum(candidates: list[int], target: int) -> list[list[int]]:\n    res = []\n    def backtrack(start, remain, path):\n        if remain == 0: res.append(list(path)); return\n        if remain < 0: return\n        for i in range(start, len(candidates)):\n            path.append(candidates[i])\n            backtrack(i, remain - candidates[i], path)\n            path.pop()\n    backtrack(0, target, [])\n    return res"
+    }
+  },
+  {
+    "id": "dsa-tr-1",
+    "topic": "Trees",
+    "title": "Maximum Depth of Binary Tree",
+    "difficulty": "Easy",
+    "companies": [
+      "Amazon",
+      "Microsoft",
+      "Google",
+      "TCS",
+      "Accenture"
+    ],
+    "pattern": "Recursive Tree Traversal",
+    "description": "Given the root of a binary tree, return its maximum depth. A binary tree's maximum depth is the number of nodes along the longest path from root to farthest leaf node.",
+    "example": "Input: root = [3,9,20,null,null,15,7]\nOutput: 3",
+    "hints": [
+      "Base case: if root is null, depth is 0. Otherwise, 1 + max(left, right)."
+    ],
+    "approach": "Post-order traversal: compute maxDepth of left child and right child, return 1 + max(leftDepth, rightDepth).",
+    "complexity": "Time: O(N) | Space: O(H)",
+    "code": {
+      "cpp": "int maxDepth(TreeNode* root) {\n    if (!root) return 0;\n    return 1 + max(maxDepth(root->left), maxDepth(root->right));\n}",
+      "java": "public int maxDepth(TreeNode root) {\n    if (root == null) return 0;\n    return 1 + Math.max(maxDepth(root.left), maxDepth(root.right));\n}",
+      "python": "def maxDepth(root: Optional[TreeNode]) -> int:\n    if not root: return 0\n    return 1 + max(maxDepth(root.left), maxDepth(root.right))"
+    }
+  },
+  {
+    "id": "dsa-tr-2",
+    "topic": "Trees",
+    "title": "Lowest Common Ancestor of a Binary Tree",
+    "difficulty": "Medium",
+    "companies": [
+      "Amazon",
+      "Microsoft",
+      "Google",
+      "Facebook"
+    ],
+    "pattern": "Recursive Tree Traversal",
+    "description": "Given a binary tree, find the lowest common ancestor (LCA) of two given nodes p and q in the tree.",
+    "example": "Input: root = [3,5,1,6,2,0,8,null,null,7,4], p = 5, q = 1\nOutput: 3",
+    "hints": [
+      "If root is null or matches p or q, return root."
+    ],
+    "approach": "Recurse on left and right subtrees. If both return non-null, root is LCA. If only one returns non-null, propagate that up.",
+    "complexity": "Time: O(N) | Space: O(H)",
+    "code": {
+      "cpp": "TreeNode* lowestCommonAncestor(TreeNode* root, TreeNode* p, TreeNode* q) {\n    if (!root || root == p || root == q) return root;\n    TreeNode* left = lowestCommonAncestor(root->left, p, q);\n    TreeNode* right = lowestCommonAncestor(root->right, p, q);\n    if (left && right) return root;\n    return left ? left : right;\n}",
+      "java": "public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {\n    if (root == null || root == p || root == q) return root;\n    TreeNode left = lowestCommonAncestor(root.left, p, q);\n    TreeNode right = lowestCommonAncestor(root.right, p, q);\n    if (left != null && right != null) return root;\n    return left != null ? left : right;\n}",
+      "python": "def lowestCommonAncestor(root: TreeNode, p: TreeNode, q: TreeNode) -> TreeNode:\n    if not root or root == p or root == q: return root\n    left = lowestCommonAncestor(root.left, p, q)\n    right = lowestCommonAncestor(root.right, p, q)\n    if left and right: return root\n    return left or right"
+    }
+  },
+  {
+    "id": "dsa-gr-1",
+    "topic": "Graphs",
+    "title": "Number of Islands",
+    "difficulty": "Medium",
+    "companies": [
+      "Amazon",
+      "Google",
+      "Microsoft",
+      "Swiggy",
+      "Infosys SP"
+    ],
+    "pattern": "BFS / DFS Matrix Traversal",
+    "description": "Given an m x n 2D binary grid grid which represents a map of '1's (land) and '0's (water), return the number of islands.",
+    "example": "Input: grid = [\n  ['1','1','0'],\n  ['1','1','0'],\n  ['0','0','1']\n]\nOutput: 2",
+    "hints": [
+      "Traverse matrix and sink visited lands to '0'."
+    ],
+    "approach": "When encountering '1', increment island count and initiate DFS/BFS to visit and sink all 4-directionally connected land cells.",
+    "complexity": "Time: O(M \u00d7 N) | Space: O(M \u00d7 N)",
+    "code": {
+      "cpp": "void dfs(vector<vector<char>>& grid, int r, int c) {\n    if (r < 0 || c < 0 || r >= grid.size() || c >= grid[0].size() || grid[r][c] == '0') return;\n    grid[r][c] = '0';\n    dfs(grid, r+1, c); dfs(grid, r-1, c); dfs(grid, r, c+1); dfs(grid, r, c-1);\n}\nint numIslands(vector<vector<char>>& grid) {\n    int count = 0;\n    for (int i = 0; i < grid.size(); ++i)\n        for (int j = 0; j < grid[0].size(); ++j)\n            if (grid[i][j] == '1') { count++; dfs(grid, i, j); }\n    return count;\n}",
+      "java": "public int numIslands(char[][] grid) {\n    int count = 0;\n    for (int i = 0; i < grid.length; i++)\n        for (int j = 0; j < grid[0].length; j++)\n            if (grid[i][j] == '1') { count++; sink(grid, i, j); }\n    return count;\n}\nprivate void sink(char[][] g, int r, int c) {\n    if (r < 0 || c < 0 || r >= g.length || c >= g[0].length || g[r][c] == '0') return;\n    g[r][c] = '0';\n    sink(g, r+1, c); sink(g, r-1, c); sink(g, r, c+1); sink(g, r, c-1);\n}",
+      "python": "def numIslands(grid: list[list[str]]) -> int:\n    if not grid: return 0\n    R, C = len(grid), len(grid[0])\n    def dfs(r, c):\n        if 0 <= r < R and 0 <= c < C and grid[r][c] == '1':\n            grid[r][c] = '0'\n            dfs(r+1, c); dfs(r-1, c); dfs(r, c+1); dfs(r, c-1)\n    islands = 0\n    for r in range(R):\n        for c in range(C):\n            if grid[r][c] == '1': islands += 1; dfs(r, c)\n    return islands"
+    }
+  },
+  {
+    "id": "dsa-gr-2",
+    "topic": "Graphs",
+    "title": "Course Schedule (Cycle Detection / Topological Sort)",
+    "difficulty": "Medium",
+    "companies": [
+      "Amazon",
+      "Google",
+      "Microsoft",
+      "Uber"
+    ],
+    "pattern": "Kahn's Algorithm (BFS In-degree)",
+    "description": "There are numCourses courses you have to take, labeled from 0 to numCourses - 1. You are given prerequisites[i] = [ai, bi] indicating that you must take course bi first if you want to take course ai. Return true if you can finish all courses.",
+    "example": "Input: numCourses = 2, prerequisites = [[1,0]]\nOutput: true\nExplanation: Take course 0 then course 1.",
+    "hints": [
+      "Can you detect if the directed graph contains a cycle using in-degrees?"
+    ],
+    "approach": "Build adjacency list and in-degree array. Push all nodes with in-degree 0 into a queue. Pop nodes, decrement neighbors' in-degree; if 0, push. If processed nodes == numCourses, return true.",
+    "complexity": "Time: O(V + E) | Space: O(V + E)",
+    "code": {
+      "cpp": "bool canFinish(int numCourses, vector<vector<int>>& prerequisites) {\n    vector<vector<int>> adj(numCourses);\n    vector<int> inDegree(numCourses, 0);\n    for (auto& p : prerequisites) {\n        adj[p[1]].push_back(p[0]);\n        inDegree[p[0]]++;\n    }\n    queue<int> q;\n    for (int i = 0; i < numCourses; ++i) if (inDegree[i] == 0) q.push(i);\n    int visited = 0;\n    while (!q.empty()) {\n        int curr = q.front(); q.pop();\n        visited++;\n        for (int neighbor : adj[curr]) {\n            if (--inDegree[neighbor] == 0) q.push(neighbor);\n        }\n    }\n    return visited == numCourses;\n}",
+      "java": "public boolean canFinish(int numCourses, int[][] prerequisites) {\n    List<List<Integer>> adj = new ArrayList<>();\n    for (int i = 0; i < numCourses; i++) adj.add(new ArrayList<>());\n    int[] inDegree = new int[numCourses];\n    for (int[] p : prerequisites) {\n        adj.get(p[1]).add(p[0]);\n        inDegree[p[0]]++;\n    }\n    Queue<Integer> q = new LinkedList<>();\n    for (int i = 0; i < numCourses; i++) if (inDegree[i] == 0) q.add(i);\n    int visited = 0;\n    while (!q.isEmpty()) {\n        int curr = q.poll(); visited++;\n        for (int nxt : adj.get(curr)) if (--inDegree[nxt] == 0) q.add(nxt);\n    }\n    return visited == numCourses;\n}",
+      "python": "def canFinish(numCourses: int, prerequisites: list[list[int]]) -> bool:\n    adj = {i: [] for i in range(numCourses)}\n    in_degree = [0] * numCourses\n    for dest, src in prerequisites:\n        adj[src].append(dest)\n        in_degree[dest] += 1\n    q = collections.deque([i for i in range(numCourses) if in_degree[i] == 0])\n    visited = 0\n    while q:\n        curr = q.popleft()\n        visited += 1\n        for nxt in adj[curr]:\n            in_degree[nxt] -= 1\n            if in_degree[nxt] == 0: q.append(nxt)\n    return visited == numCourses"
+    }
+  },
+  {
+    "id": "dsa-dp-1",
+    "topic": "Dynamic Programming",
+    "title": "Coin Change",
+    "difficulty": "Medium",
+    "companies": [
+      "Amazon",
+      "Google",
+      "Microsoft",
+      "TCS Prime",
+      "Razorpay"
+    ],
+    "pattern": "1D Bottom-Up DP (Unbounded Knapsack)",
+    "description": "Given an integer array coins and an integer amount, return the fewest number of coins that you need to make up that amount. If that amount of money cannot be made up, return -1.",
+    "example": "Input: coins = [1,2,5], amount = 11\nOutput: 3\nExplanation: 11 = 5 + 5 + 1",
+    "hints": [
+      "Define dp[i] as the minimum coins needed to make amount i."
+    ],
+    "approach": "Initialize dp of size amount + 1 with infinity, dp[0] = 0. For each i from 1 to amount: for each coin c: if i >= c: dp[i] = min(dp[i], dp[i - c] + 1).",
+    "complexity": "Time: O(amount \u00d7 |coins|) | Space: O(amount)",
+    "code": {
+      "cpp": "int coinChange(vector<int>& coins, int amount) {\n    vector<int> dp(amount + 1, amount + 1);\n    dp[0] = 0;\n    for (int i = 1; i <= amount; ++i) {\n        for (int c : coins) if (i >= c) dp[i] = min(dp[i], dp[i - c] + 1);\n    }\n    return dp[amount] > amount ? -1 : dp[amount];\n}",
+      "java": "public int coinChange(int[] coins, int amount) {\n    int[] dp = new int[amount + 1];\n    Arrays.fill(dp, amount + 1);\n    dp[0] = 0;\n    for (int i = 1; i <= amount; i++) {\n        for (int c : coins) if (i >= c) dp[i] = Math.min(dp[i], dp[i - c] + 1);\n    }\n    return dp[amount] > amount ? -1 : dp[amount];\n}",
+      "python": "def coinChange(coins: list[int], amount: int) -> int:\n    dp = [float('inf')] * (amount + 1)\n    dp[0] = 0\n    for i in range(1, amount + 1):\n        for c in coins:\n            if i >= c: dp[i] = min(dp[i], dp[i - c] + 1)\n    return dp[amount] if dp[amount] != float('inf') else -1"
+    }
+  },
+  {
+    "id": "dsa-dp-2",
+    "topic": "Dynamic Programming",
+    "title": "Climbing Stairs",
+    "difficulty": "Easy",
+    "companies": [
+      "Amazon",
+      "Google",
+      "Adobe",
+      "TCS",
+      "Infosys"
+    ],
+    "pattern": "Fibonacci DP",
+    "description": "You are climbing a staircase. It takes n steps to reach the top. Each time you can either climb 1 or 2 steps. In how many distinct ways can you climb to the top?",
+    "example": "Input: n = 3\nOutput: 3\nExplanation: 1 step + 1 step + 1 step, 1 step + 2 steps, 2 steps + 1 step.",
+    "hints": [
+      "Ways to reach step i is ways(i - 1) + ways(i - 2)."
+    ],
+    "approach": "Bottom up: keep two variables a = 1, b = 2 representing ways to reach previous two steps. Transition: c = a + b.",
+    "complexity": "Time: O(N) | Space: O(1)",
+    "code": {
+      "cpp": "int climbStairs(int n) {\n    if (n <= 2) return n;\n    int a = 1, b = 2;\n    for (int i = 3; i <= n; ++i) {\n        int c = a + b;\n        a = b; b = c;\n    }\n    return b;\n}",
+      "java": "public int climbStairs(int n) {\n    if (n <= 2) return n;\n    int a = 1, b = 2;\n    for (int i = 3; i <= n; i++) {\n        int c = a + b;\n        a = b; b = c;\n    }\n    return b;\n}",
+      "python": "def climbStairs(n: int) -> int:\n    if n <= 2: return n\n    a, b = 1, 2\n    for _ in range(3, n + 1):\n        a, b = b, a + b\n    return b"
+    }
+  },
+  {
+    "id": "dsa-grd-1",
+    "topic": "Greedy Algorithms",
+    "title": "Jump Game",
+    "difficulty": "Medium",
+    "companies": [
+      "Amazon",
+      "Microsoft",
+      "Google",
+      "Swiggy"
+    ],
+    "pattern": "Greedy Reachability",
+    "description": "You are given an integer array nums. You are initially positioned at the array's first index, and each element in the array represents your maximum jump length at that position. Return true if you can reach the last index, or false otherwise.",
+    "example": "Input: nums = [2,3,1,1,4]\nOutput: true\nExplanation: Jump 1 step from index 0 to 1, then 3 steps to last index.",
+    "hints": [
+      "Maintain the furthest index you can currently reach."
+    ],
+    "approach": "Iterate through nums. If current index i > maxReach, return false. Update maxReach = max(maxReach, i + nums[i]). If maxReach >= n - 1, return true.",
+    "complexity": "Time: O(N) | Space: O(1)",
+    "code": {
+      "cpp": "bool canJump(vector<int>& nums) {\n    int maxReach = 0;\n    for (int i = 0; i < nums.size(); ++i) {\n        if (i > maxReach) return false;\n        maxReach = max(maxReach, i + nums[i]);\n        if (maxReach >= nums.size() - 1) return true;\n    }\n    return true;\n}",
+      "java": "public boolean canJump(int[] nums) {\n    int maxReach = 0;\n    for (int i = 0; i < nums.length; i++) {\n        if (i > maxReach) return false;\n        maxReach = Math.max(maxReach, i + nums[i]);\n        if (maxReach >= nums.length - 1) return true;\n    }\n    return true;\n}",
+      "python": "def canJump(nums: list[int]) -> bool:\n    max_reach = 0\n    for i, jump in enumerate(nums):\n        if i > max_reach: return False\n        max_reach = max(max_reach, i + jump)\n        if max_reach >= len(nums) - 1: return True\n    return True"
+    }
+  },
+  {
+    "id": "dsa-grd-2",
+    "topic": "Greedy Algorithms",
+    "title": "Gas Station",
+    "difficulty": "Medium",
+    "companies": [
+      "Amazon",
+      "Google",
+      "Microsoft",
+      "Flipkart"
+    ],
+    "pattern": "Greedy Cumulative Sum",
+    "description": "There are n gas stations along a circular route, where gas[i] is the amount of gas at the ith station. You have a car with unlimited gas tank and it costs cost[i] of gas to travel from the ith station to its next (i + 1)th station. Return the starting gas station's index if you can travel around the circuit once, otherwise return -1.",
+    "example": "Input: gas = [1,2,3,4,5], cost = [3,4,5,1,2]\nOutput: 3",
+    "hints": [
+      "If total gas < total cost, complete circuit is impossible."
+    ],
+    "approach": "Maintain totalSurplus, currSurplus, and start = 0. Add gas[i] - cost[i] to both. If currSurplus < 0, reset currSurplus = 0 and set start = i + 1. If totalSurplus >= 0, return start else -1.",
+    "complexity": "Time: O(N) | Space: O(1)",
+    "code": {
+      "cpp": "int canCompleteCircuit(vector<int>& gas, vector<int>& cost) {\n    int total = 0, curr = 0, start = 0;\n    for (int i = 0; i < gas.size(); ++i) {\n        total += gas[i] - cost[i];\n        curr += gas[i] - cost[i];\n        if (curr < 0) {\n            start = i + 1;\n            curr = 0;\n        }\n    }\n    return total >= 0 ? start : -1;\n}",
+      "java": "public int canCompleteCircuit(int[] gas, int[] cost) {\n    int total = 0, curr = 0, start = 0;\n    for (int i = 0; i < gas.length; i++) {\n        total += gas[i] - cost[i];\n        curr += gas[i] - cost[i];\n        if (curr < 0) { start = i + 1; curr = 0; }\n    }\n    return total >= 0 ? start : -1;\n}",
+      "python": "def canCompleteCircuit(gas: list[int], cost: list[int]) -> int:\n    if sum(gas) < sum(cost): return -1\n    total = curr = start = 0\n    for i in range(len(gas)):\n        curr += gas[i] - cost[i]\n        if curr < 0:\n            start = i + 1\n            curr = 0\n    return start"
+    }
+  },
+  {
+    "id": "dsa-hash-1",
+    "topic": "Hashing",
+    "title": "Two Sum",
+    "difficulty": "Easy",
+    "companies": [
+      "Google",
+      "Amazon",
+      "Microsoft",
+      "TCS Digital",
+      "Infosys"
+    ],
+    "pattern": "Hash Map Lookup",
+    "description": "Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target. You may assume that each input would have exactly one solution, and you may not use the same element twice.",
+    "example": "Input: nums = [2,7,11,15], target = 9\nOutput: [0,1]\nExplanation: nums[0] + nums[1] == 9, we return [0, 1].",
+    "hints": [
+      "Can you check if (target - current_number) exists in a hash map as you iterate through the array?"
+    ],
+    "approach": "Use an unordered hash map storing value -> index. For each number x, calculate complement = target - x. If complement is in hash map, return [map[complement], current_index]. Otherwise, store x.",
+    "complexity": "Time: O(N) | Space: O(N)",
+    "code": {
+      "cpp": "vector<int> twoSum(vector<int>& nums, int target) {\n    unordered_map<int, int> mp;\n    for (int i = 0; i < nums.size(); ++i) {\n        int comp = target - nums[i];\n        if (mp.count(comp)) return {mp[comp], i};\n        mp[nums[i]] = i;\n    }\n    return {};\n}",
+      "java": "public int[] twoSum(int[] nums, int target) {\n    Map<Integer, Integer> map = new HashMap<>();\n    for (int i = 0; i < nums.length; i++) {\n        int comp = target - nums[i];\n        if (map.containsKey(comp)) return new int[] { map.get(comp), i };\n        map.put(nums[i], i);\n    }\n    return new int[]{};\n}",
+      "python": "def twoSum(nums: list[int], target: int) -> list[int]:\n    seen = {}\n    for i, num in enumerate(nums):\n        diff = target - num\n        if diff in seen: return [seen[diff], i]\n        seen[num] = i\n    return []"
+    }
+  },
+  {
+    "id": "dsa-hash-2",
+    "topic": "Hashing",
+    "title": "Group Anagrams",
+    "difficulty": "Medium",
+    "companies": [
+      "Amazon",
+      "Google",
+      "Microsoft",
+      "Uber"
+    ],
+    "pattern": "Hash Map Categorization",
+    "description": "Given an array of strings strs, group the anagrams together. You can return the answer in any order. An Anagram is a word or phrase formed by rearranging the letters of a different word or phrase.",
+    "example": "Input: strs = ['eat','tea','tan','ate','nat','bat']\nOutput: [['bat'],['nat','tan'],['ate','eat','tea']]",
+    "hints": [
+      "Sort each string to use as a canonical hash key."
+    ],
+    "approach": "For each string s, sort its characters to create key. Add s to hash map list corresponding to key. Return all map values.",
+    "complexity": "Time: O(N \u00d7 K log K) | Space: O(N \u00d7 K)",
+    "code": {
+      "cpp": "vector<vector<string>> groupAnagrams(vector<string>& strs) {\n    unordered_map<string, vector<string>> mp;\n    for (string s : strs) {\n        string key = s;\n        sort(key.begin(), key.end());\n        mp[key].push_back(s);\n    }\n    vector<vector<string>> res;\n    for (auto& p : mp) res.push_back(p.second);\n    return res;\n}",
+      "java": "public List<List<String>> groupAnagrams(String[] strs) {\n    Map<String, List<String>> map = new HashMap<>();\n    for (String s : strs) {\n        char[] ca = s.toCharArray();\n        Arrays.sort(ca);\n        String key = String.valueOf(ca);\n        if (!map.containsKey(key)) map.put(key, new ArrayList<>());\n        map.get(key).add(s);\n    }\n    return new ArrayList<>(map.values());\n}",
+      "python": "def groupAnagrams(strs: list[str]) -> list[list[str]]:\n    mp = collections.defaultdict(list)\n    for s in strs:\n        key = ''.join(sorted(s))\n        mp[key].append(s)\n    return list(mp.values())"
+    }
+  }
+]
