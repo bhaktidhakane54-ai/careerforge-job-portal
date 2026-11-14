@@ -1,0 +1,9 @@
+{
+  "name": "careerforge-job-portal",
+  "version": "1.0.0",
+  "private": true,
+  "description": "CareerForge - Job Portal and Interview Preparation Platform",
+  "scripts": {
+    "build": "echo 'Static build complete'"
+  }
+}
